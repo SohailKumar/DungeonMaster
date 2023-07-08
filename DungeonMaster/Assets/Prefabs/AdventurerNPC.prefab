@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.0125
   health: 20
+  knockbackMax: 0.5
+  knockbackForce: 0.01
 --- !u!61 &2207268826133103636
 BoxCollider2D:
   m_ObjectHideFlags: 0
