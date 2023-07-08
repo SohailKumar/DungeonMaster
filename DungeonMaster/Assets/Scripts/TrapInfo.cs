@@ -8,20 +8,22 @@ public class TrapInfo : MonoBehaviour
 {
     [SerializeField] int trapNumber;
     [SerializeField] string trapName;
-    [SerializeField] Trap trap;
+    [SerializeField] List<Trap> trapList;
     int trapPrice;
     int trapOwned;
 
     TextMeshProUGUI[] textObjects;
 
     GameManager gm;
+    int randomTrap;
 
     public void Awake()
     {
+        randomTrap = Random.Range(0, trapList.Count);
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 
-        trapName = trap.trapname;
-        trapPrice = trap.cost;
+        trapName = trapList[randomTrap].trapname;
+        trapPrice = trapList[randomTrap].cost;
         trapOwned = gm.TrapCheck(trapNumber);
 
         textObjects = GetComponentsInChildren<TextMeshProUGUI>();
@@ -39,7 +41,7 @@ public class TrapInfo : MonoBehaviour
             textObjects[2].text = trapOwned.ToString();
             CurrencySystem.Instance.setMoneyText();
 
-            InventoryManager.Instance.AddTrap(trap);
+            InventoryManager.Instance.AddTrap(trapList[randomTrap]);
             InventoryManager.Instance.ListItems();
         }
     }
