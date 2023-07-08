@@ -4,13 +4,31 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public enum Screen
+    {
+        Menu,
+        Dungeon,
+        SellShop
+    }
+
+    public Screen curScreen;
+
     [SerializeField]
     public GameObject[] traps;
     public List<GameObject> trapInventory;
     public List<GameObject> trapActive;
 
+    [SerializeField]
+    private GameObject trapShop;
+
     public void Awake()
     {
+        if(curScreen == Screen.Dungeon)
+        {
+            trapShop = GameObject.Find("TrapShop");
+            trapShop.SetActive(false);
+        }
+        
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -26,5 +44,15 @@ public class GameManager : MonoBehaviour
             }
         }
         return sum;
+    }
+
+    public void OpenTrapShop()
+    {
+        trapShop.SetActive(true);
+    }
+
+    public void CloseTrapShop()
+    {
+        trapShop.SetActive(false);
     }
 }

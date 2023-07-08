@@ -5,9 +5,11 @@ using UnityEngine;
 public class TrapSelector : MonoBehaviour
 {
     private Color startColor;
+    [SerializeField] private TrapSelector trapSelector;
 
     private void Awake()
     {
+        trapSelector = GameObject.Find("TrapSelector").GetComponent<TrapSelector>();
         startColor = GetComponent<SpriteRenderer>().color;
     }
 
@@ -24,5 +26,6 @@ public class TrapSelector : MonoBehaviour
     private void OnMouseDown()
     {
         GetComponent<SpriteRenderer>().color = Color.green;
+        
     }
 }
