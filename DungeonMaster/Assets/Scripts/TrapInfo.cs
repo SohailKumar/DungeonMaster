@@ -11,12 +11,15 @@ public class TrapInfo : MonoBehaviour
     int trapPrice;
     int trapOwned;
 
+    [SerializeField] TextMeshProUGUI textCurrency;
+
     TextMeshProUGUI[] textObjects;
 
     GameManager gm;
 
     public void Awake()
     {
+        textCurrency.text = CurrencySystem.Instance.getMoney().ToString();
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 
         Trap info = gm.traps[trapNumber].GetComponent<Trap>();

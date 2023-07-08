@@ -13,12 +13,17 @@ public class CurrencySystem : GenericSingleton<CurrencySystem>
 
     public bool loseMoney(int loseAmount)
     {
-        if(loseAmount >= money)
+        if(money >= loseAmount)
         {
             money -= loseAmount;
             return true;
         }
         return false;
+    }
+
+    public int getMoney()
+    {
+        return money;
     }
 
 }
