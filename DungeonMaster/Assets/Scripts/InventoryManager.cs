@@ -32,6 +32,10 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems()
     {
+        foreach(Transform item in ItemContent)
+        {
+            Destroy(item.gameObject);
+        }
         foreach(var item in items)
         {
             Debug.Log(items.Count);
