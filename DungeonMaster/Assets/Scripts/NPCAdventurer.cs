@@ -6,7 +6,9 @@ public class NPCAdventurer : MonoBehaviour
 {
     public float speed = 0.05f;
     public float health = 20;
+    public float knockbackMax = 1f;
 
+    public float knockbackForce = 0.05f;
     private bool knockedBack = false;
     private float knockbackTimer = 0f;
 
@@ -18,9 +20,9 @@ public class NPCAdventurer : MonoBehaviour
         else
         {
             knockbackTimer += Time.deltaTime;
-            transform.position = new Vector2(transform.position.x - speed*2*(1-knockbackTimer), transform.position.y);
+            transform.position = new Vector2(transform.position.x - knockbackForce*2*(knockbackMax-knockbackTimer), transform.position.y);
 
-            if(knockbackTimer > 1)
+            if(knockbackTimer > knockbackMax)
             {
                 knockedBack = false;
                 knockbackTimer = 0;
@@ -37,6 +39,7 @@ public class NPCAdventurer : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        GetComponent<SpriteRenderer>().color = Color.red;
         health -= damage;
 
     }
@@ -71,5 +74,16 @@ public class NPCAdventurer : MonoBehaviour
             TakeDamage(5);
             TakeKnockback();
         }
+    }
+
+    public void TakeTrapDamage(int dmg)
+    {
+        if (!knockedBack)
+        {
+            Debug.Log("DMADL:KFJSDIUEIFJ");
+            TakeDamage(dmg);
+            TakeKnockback();
+        }
+        
     }
 }
