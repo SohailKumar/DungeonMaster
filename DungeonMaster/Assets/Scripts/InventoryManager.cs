@@ -64,4 +64,13 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             itemIcon.sprite = item.image;
         }
     }
+
+    public void InventorySizeForScene(Vector2 position, Vector2 SpaceOccupied)
+    {
+        ItemContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, SpaceOccupied.y);
+        ItemContent.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(SpaceOccupied.x, SpaceOccupied.y);
+        ItemContent.parent.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(SpaceOccupied.x, SpaceOccupied.y);
+
+        ItemContent.parent.parent.transform.position = position;
+    }
 }
