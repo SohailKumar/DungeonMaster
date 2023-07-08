@@ -19,6 +19,9 @@ public class InventoryManager : GenericSingleton<InventoryManager>
     public void Start()
     {
         GenerateRandomItem(new Vector2(0,0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
     }
 
     public void Add(Items item)
