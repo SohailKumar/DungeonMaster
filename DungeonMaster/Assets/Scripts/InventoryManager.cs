@@ -56,12 +56,23 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             var itemIcon = obj.transform.Find("Image").GetComponent<Image>();
             var itemID = obj.transform.GetComponent<ItemController>();
 
-/*            Debug.Log(itemID);
-            Debug.Log(itemName);
-            Debug.Log(itemIcon);*/
+            var Popup = obj.transform.Find("InfoPopup").GetChild(0);
+
+            var CardName = Popup.transform.Find("ItemNameCard").GetComponent<TMP_Text>();
+            var CardValue = Popup.transform.Find("Value").GetComponent<TMP_Text>();
+            var CardImage = Popup.transform.Find("CardImage").GetComponent<Image>();
+            var CardFlavor = Popup.transform.Find("FlavorText").GetComponent<TMP_Text>();
+            var CardAtkDef = Popup.transform.Find("AtkDefText").GetComponent<TMP_Text>();
+
             itemID.Item = item;
             itemName.text = item.itemName;
             itemIcon.sprite = item.image;
+
+            CardName.text = item.itemName;
+            CardValue.text = item.saleAmount + " Coins";
+            CardImage.sprite = item.image;
+            CardFlavor.text = item.flavortext;
+            CardAtkDef.text = item.AttackDamage + " Attack Damage\n" + item.Defense + " Defense";
         }
     }
 
