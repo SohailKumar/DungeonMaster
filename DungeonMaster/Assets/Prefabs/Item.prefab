@@ -486,6 +486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 0}
+  Trap: {fileID: 0}
+  isTrap: 0
 --- !u!114 &-6486319673179673286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,6 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 7281326081514216133}
   parentAfterDrag: {fileID: 0}
+  isTrap: 0
 --- !u!61 &810141500463031279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -697,7 +700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8144576833956275212
 RectTransform:
   m_ObjectHideFlags: 0
