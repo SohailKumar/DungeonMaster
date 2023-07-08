@@ -17,6 +17,10 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
+        if (dropped.GetComponent<ItemController>() == null)
+        {
+            return;
+        }
 
         if (dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Trap
             || !dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Item
