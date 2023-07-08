@@ -8,7 +8,7 @@ public class InventoryManager : MonoBehaviour
 {
 
     public static InventoryManager Instance;
-    public List<Items> items = new List<Items> ();
+    public List<Items> items = new List<Items>();
 
     public Transform ItemContent;
     public GameObject InventoryItem;
@@ -27,6 +27,7 @@ public class InventoryManager : MonoBehaviour
     {
         items.Remove(item);
     }
+
 
     public void ListItems()
     {
