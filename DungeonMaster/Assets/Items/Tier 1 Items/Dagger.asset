@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf4da83413537d40be44a4685b0a882, type: 3}
-  m_Name: Mage's Staff
+  m_Name: Dagger
   m_EditorClassIdentifier: 
-  itemName: Mage's Staff
-  saleAmount: 20
+  itemName: Dagger
+  saleAmount: 2
   image: {fileID: 21300000, guid: 32ae9304da2072343b6166bfe5f0f4f9, type: 3}
+  AttackDamage: 3
+  Defense: 0
+  flavortext: It will take more than a Dinner Knife to take my gold.

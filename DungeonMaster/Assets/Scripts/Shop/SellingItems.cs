@@ -42,6 +42,7 @@ public class SellingItems : MonoBehaviour
 
     private void LoadDungeonScene()
     {
+        InventoryManager.Instance.InventorySizeForScene(new Vector2(800, 510), new Vector2(190, 100));
         SceneManager.LoadScene("BattlerScene");
     }
 }

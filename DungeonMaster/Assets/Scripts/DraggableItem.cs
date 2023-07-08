@@ -3,11 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
-public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     [SerializeField] public Image image;
     [SerializeField] public Transform parentAfterDrag;
+
+    private Canvas infoCard;
+
+    private void Start()
+    {
+        infoCard = gameObject.transform.Find("InfoPopup").GetComponent<Canvas>();
+    }
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) && infoCard.transform.GetChild(0).gameObject.activeSelf)
+        {
+            PopupInfo(false);
+        }
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentAfterDrag = transform.parent;
@@ -25,5 +41,19 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+    }
+ 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        /*if (eventData.button == PointerEventData.InputButton.Left)
+            Debug.Log("Left click");*/
+        if (eventData.button == PointerEventData.InputButton.Right)
+            PopupInfo(true);
+            Debug.Log("Right click");
+    }
+
+    private void PopupInfo(bool show)
+    {
+        infoCard.transform.GetChild(0).gameObject.SetActive(show);
     }
 }
