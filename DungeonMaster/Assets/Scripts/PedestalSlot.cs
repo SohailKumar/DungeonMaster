@@ -5,27 +5,37 @@ using UnityEngine.EventSystems;
 
 public class PedestalSlot : MonoBehaviour, IDropHandler
 {
+    public enum DropAcceptType
+    {
+        Item,
+        Trap
+    }
+
+    public DropAcceptType dropAcceptType = DropAcceptType.Item;
+
     public void OnDrop(PointerEventData eventData)
     {
-        if (transform.childCount == 0 || transform.name == "Content")
+        GameObject dropped = eventData.pointerDrag;
+
+        if (dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Trap
+            || !dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Item)
         {
-            GameObject dropped = eventData.pointerDrag;
-            DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
-            if (draggableItem != null)
+            if (transform.childCount == 0 || transform.name == "Content")
             {
-                draggableItem.parentAfterDrag = transform;
+                DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
+                if (draggableItem != null)
+                {
+                    draggableItem.parentAfterDrag = transform;
+                }
             }
-        }
-        else if(transform.name == "Inventory")
-        {
-            GameObject dropped = eventData.pointerDrag;
-            DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
-            if (draggableItem != null)
+            else if (transform.name == "Inventory")
             {
-                draggableItem.parentAfterDrag = transform.GetChild(0).GetChild(0);
+                DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
+                if (draggableItem != null)
+                {
+                    draggableItem.parentAfterDrag = transform.GetChild(0).GetChild(0);
+                }
             }
-        }
-        
-        
+        }        
     }
 }
