@@ -15,6 +15,7 @@ public class CurrencySystem : GenericSingleton<CurrencySystem>
             InventoryManager.Instance.ListItems();
         }
     }
+
     public void addMoney(int addAmount)
     {
         money += addAmount;
