@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
 
     public static InventoryManager Instance;
-    public List<Items> items = new List<Items> ();
+    public List<Items> items = new List<Items>();
 
     public Transform ItemContent;
     public GameObject InventoryItem;
@@ -18,7 +19,7 @@ public class InventoryManager : MonoBehaviour
         Instance = this;
     }
 
-  public void Add(Items item)
+    public void Add(Items item)
     {
         items.Add(item);
     }
@@ -28,14 +29,18 @@ public class InventoryManager : MonoBehaviour
         items.Remove(item);
     }
 
+
     public void ListItems()
     {
         foreach(var item in items)
         {
+            Debug.Log(items.Count);
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+            var itemName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
+            var itemIcon = obj.transform.Find("Image").GetComponent<Image>();
 
+            Debug.Log(itemName);
+            Debug.Log(itemIcon);
             itemName.text = item.itemName;
             itemIcon.sprite = item.image;
         }

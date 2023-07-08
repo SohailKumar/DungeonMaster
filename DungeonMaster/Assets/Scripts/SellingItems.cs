@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SellingItems : MonoBehaviour
 {
-    [SerializeField] List<GameObject> shopPedestals;
+    [SerializeField] List<GameObject> shopPedestals = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
-        shopPedestals = new List<GameObject>();
+
     }
 
     // Update is called once per frame
@@ -25,7 +25,9 @@ public class SellingItems : MonoBehaviour
             if (item.transform.childCount > 0)
             {
                 Debug.Log("SOLD!!!");
-                Destroy(item.transform.GetChild(0));
+                //TODO: ADD SELLING LOGIC
+
+                Destroy(item.transform.GetChild(0).gameObject);
             }
         }
     }
