@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SellingItems : MonoBehaviour
 {
     [SerializeField] List<GameObject> shopPedestals = new List<GameObject>();
-    
+    [SerializeField] Sprite moneyDrop;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private float loadTimer = -10f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(loadTimer > -5)
+        {
+            loadTimer -= Time.deltaTime;
+            if(loadTimer < 0f)
+            {
+                LoadDungeonScene();
+            }
+        }
     }
 
     public void OnSell()
@@ -27,8 +31,16 @@ public class SellingItems : MonoBehaviour
             if (item.transform.childCount > 0)
             {
                 //TODO: ADD SELLING LOGIC
-                Debug.Log(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
+                //Debug.Log(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
                 CurrencySystem.Instance.addMoney(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
+
+                GameObject money = new GameObject();
+                money.transform.parent = transform.parent;
+                Image renderer = money.AddComponent<Image>();
+                money.transform.position = item.transform.GetChild(0).position;
+                renderer.sprite = moneyDrop;
+                renderer.transform.localScale = new Vector2(0.4f, .4f);
+
                 Destroy(item.transform.GetChild(0).gameObject);
 
                 //Deletes Item from InventoryManager
@@ -37,7 +49,7 @@ public class SellingItems : MonoBehaviour
             }
         }
         Debug.Log(CurrencySystem.Instance.getMoney());
-        LoadDungeonScene();
+        loadTimer = 2f;
     }
 
     private void LoadDungeonScene()

@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     {
         Menu,
         Dungeon,
-        SellShop
+        SellShop,
+        Battle
     }
 
     public Screen curScreen;
@@ -26,6 +27,9 @@ public class GameManager : MonoBehaviour
     private GameObject trapShop;
     private GameObject afterBattleScreen;
     //private static GameObject trapSelector;
+
+    public static int enemiesLeft;
+    public static int totalEnemies;
 
     public void Awake()
     {
@@ -70,8 +74,14 @@ public class GameManager : MonoBehaviour
         trapShop.SetActive(false);
     }
 
-    //public void CloseTrapSelector()
-    //{
-     //   trapSelector.SetActive(false);
-    //}
+    public void StartBattle()
+    {
+        trapShop.SetActive(false);
+        GameObject.Find("BuyButton").SetActive(false);
+        //SET ANY NON BATTLE UI INACTIVE HERE!
+
+        //start spawner
+        int[] ar = { 1, 1, 1, 1 };
+        GameObject.Find("Spawner").GetComponent<EnemySpawner>().StartSpawner(ar, 3);
+    }
 }
