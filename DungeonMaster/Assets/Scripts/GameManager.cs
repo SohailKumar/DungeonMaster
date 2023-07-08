@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,19 +15,32 @@ public class GameManager : MonoBehaviour
     public Screen curScreen;
 
     [SerializeField]
+    private GameObject currencyText;
+
+    [SerializeField]
     public GameObject[] traps;
-    public List<GameObject> trapInventory;
-    public List<GameObject> trapActive;
+    public static List<GameObject> trapInventory = new List<GameObject>();
+    public static List<GameObject> trapActive = new List<GameObject>();
 
     [SerializeField]
     private GameObject trapShop;
+    private GameObject afterBattleScreen;
+    //private static GameObject trapSelector;
 
     public void Awake()
     {
+        CurrencySystem.currencyText = GameObject.Find("CurrentMoney").GetComponent<TextMeshProUGUI>();
+        CurrencySystem.Instance.addMoney(400);
+        CurrencySystem.Instance.setMoneyText();
+
         if(curScreen == Screen.Dungeon)
         {
+            
             trapShop = GameObject.Find("TrapShop");
             trapShop.SetActive(false);
+
+            afterBattleScreen = GameObject.Find("AfterBattlePanel");
+            afterBattleScreen.SetActive(false);
         }
         
         DontDestroyOnLoad(this.gameObject);
@@ -55,4 +69,9 @@ public class GameManager : MonoBehaviour
     {
         trapShop.SetActive(false);
     }
+
+    //public void CloseTrapSelector()
+    //{
+     //   trapSelector.SetActive(false);
+    //}
 }

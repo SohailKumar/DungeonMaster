@@ -9,8 +9,7 @@ public class TrapSelector : MonoBehaviour
 
     private void Awake()
     {
-        trapSelector = GameObject.Find("TrapSelector");
-        trapSelector.SetActive(false);
+        trapSelector = GameObject.Find("TrapSelectorUI");
         startColor = GetComponent<SpriteRenderer>().color;
     }
 
@@ -29,4 +28,5 @@ public class TrapSelector : MonoBehaviour
         trapSelector.SetActive(true);
         GetComponent<SpriteRenderer>().color = Color.green;
     }
+   
 }
