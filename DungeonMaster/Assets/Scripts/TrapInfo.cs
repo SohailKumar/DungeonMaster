@@ -8,6 +8,7 @@ public class TrapInfo : MonoBehaviour
 {
     [SerializeField] int trapNumber;
     [SerializeField] string trapName;
+    [SerializeField] Trap trap;
     int trapPrice;
     int trapOwned;
 
@@ -19,9 +20,8 @@ public class TrapInfo : MonoBehaviour
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 
-        Trap info = gm.traps[trapNumber].GetComponent<Trap>();
-        trapName = info.trapname;
-        trapPrice = info.cost;
+        trapName = trap.trapname;
+        trapPrice = trap.cost;
         trapOwned = gm.TrapCheck(trapNumber);
 
         textObjects = GetComponentsInChildren<TextMeshProUGUI>();
@@ -38,6 +38,9 @@ public class TrapInfo : MonoBehaviour
             trapOwned++;
             textObjects[2].text = trapOwned.ToString();
             CurrencySystem.Instance.setMoneyText();
+
+            InventoryManager.Instance.AddTrap(trap);
+            InventoryManager.Instance.ListItems();
         }
     }
 }

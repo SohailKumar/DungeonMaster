@@ -45,7 +45,7 @@ public class SellingItems : MonoBehaviour
 
                 //Deletes Item from InventoryManager
                 Items deletedItem = item.transform.GetChild(0).GetComponent<ItemController>().Item;
-                InventoryManager.Instance.Remove(deletedItem);
+                InventoryManager.Instance.RemoveItem(deletedItem);
             }
         }
         Debug.Log(CurrencySystem.Instance.getMoney());

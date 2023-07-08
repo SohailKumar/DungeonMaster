@@ -25,14 +25,24 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         GenerateRandomItem(new Vector2(0, 0));
     }
 
-    public void Add(Items item)
+    public void AddItem(Items item)
     {
         items.Add(item);
     }
     
-    public void Remove(Items item)
+    public void RemoveItem(Items item)
     {
         items.Remove(item);
+    }
+
+    public void AddTrap(Trap trap)
+    {
+        traps.Add(trap);
+    }
+
+    public void RemoveTrap(Trap trap)
+    {
+        traps.Remove(trap);
     }
 
     public void GenerateRandomItem(Vector2 position)
@@ -86,9 +96,10 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             var trapIcon = obj.transform.Find("Image").GetComponent<Image>();
             var trapID = obj.transform.GetComponent<ItemController>();
 
-            //itemID.Item = trap;
-            //itemName.text = trap.itemName;
-            //itemIcon.sprite = trap.image;
+            trapID.Trap = trap;
+            trapID.isTrap = true;
+            trapName.text = trap.trapname;
+            trapIcon.sprite = trap.image;
 
         }
     }

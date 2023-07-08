@@ -345,6 +345,10 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trap
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f47904dfd00bad42b1e8e51ba4d5a6a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3581,6 +3585,10 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trap
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f47904dfd00bad42b1e8e51ba4d5a6a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4538,6 +4546,10 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trap
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f47904dfd00bad42b1e8e51ba4d5a6a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

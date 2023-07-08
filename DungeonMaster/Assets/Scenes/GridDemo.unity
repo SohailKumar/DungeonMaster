@@ -1033,6 +1033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+  traps: []
   ItemContent: {fileID: 660299977}
   InventoryItem: {fileID: 3096812457557359583, guid: 85b4eb21666bde14b971937eeb12024e, type: 3}
   ItemToInstantiate: {fileID: 927976460406255368, guid: 0936be6e7bf250a40810e32865b760a4, type: 3}
@@ -1198,6 +1199,7 @@ MonoBehaviour:
   - {fileID: 1879162276}
   - {fileID: 337170412}
   - {fileID: 208083985}
+  moneyDrop: {fileID: 21300000, guid: 9b929333f192c894c89ffa3d2e61b7b9, type: 3}
 --- !u!114 &1530805955
 MonoBehaviour:
   m_ObjectHideFlags: 0
