@@ -30,9 +30,13 @@ public class GameManager : MonoBehaviour
 
     public static int enemiesLeft;
     public static int totalEnemies;
+    public static TextMeshProUGUI enemyCounterText;
 
     public void Awake()
     {
+        enemyCounterText = GameObject.Find("EnemyCounter").GetComponent<TextMeshProUGUI>();
+        enemyCounterText.text = "";
+
         CurrencySystem.currencyText = GameObject.Find("CurrentMoney").GetComponent<TextMeshProUGUI>();
         CurrencySystem.Instance.addMoney(400);
         CurrencySystem.Instance.setMoneyText();

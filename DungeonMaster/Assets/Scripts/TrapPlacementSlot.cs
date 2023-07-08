@@ -34,6 +34,9 @@ public class TrapPlacementSlot : MonoBehaviour
     void GenerateTrap()
     {
         displayTrap.GetComponent<SpriteRenderer>().sprite = transform.GetChild(0).Find("Image").GetComponent<Image>().sprite;
+        Trapper trapper = displayTrap.GetComponent<Trapper>();
+        trapper.damage = transform.GetComponentInChildren<ItemController>().Trap.damage;
+        trapper.attackSpeed = transform.GetComponentInChildren<ItemController>().Trap.atkSpeed;
         trap = Instantiate(displayTrap, new Vector3(Camera.main.ScreenToWorldPoint(transform.position).x, Camera.main.ScreenToWorldPoint(transform.position).y + 1), transform.rotation);
     }
 
