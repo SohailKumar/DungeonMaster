@@ -37,7 +37,6 @@ public class SellingItems : MonoBehaviour
             }
         }
         Debug.Log(CurrencySystem.Instance.getMoney());
-        CurrencySystem.Instance.items = InventoryManager.Instance.items;
         LoadDungeonScene();
     }
 

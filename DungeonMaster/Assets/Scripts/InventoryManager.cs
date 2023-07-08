@@ -5,19 +5,12 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : GenericSingleton<InventoryManager>
 {
-
-    public static InventoryManager Instance;
     public List<Items> items = new List<Items>();
 
     public Transform ItemContent;
     public GameObject InventoryItem;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     public void Add(Items item)
     {
