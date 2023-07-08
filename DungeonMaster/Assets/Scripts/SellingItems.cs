@@ -30,9 +30,9 @@ public class SellingItems : MonoBehaviour
                 CurrencySystem.Instance.addMoney(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
                 Destroy(item.transform.GetChild(0).gameObject);
 
-                //Needs fix: Use Remove function of inventory manager to get rid of the item after sold so it 
-                //Doesnt stay when the list is refreshed
-                /*InventoryManager.Instance.Remove(item);*/
+                //Deletes Item from InventoryManager
+                Items deletedItem = item.transform.GetChild(0).GetComponent<ItemController>().Item;
+                InventoryManager.Instance.Remove(deletedItem);
             }
         }
         Debug.Log(CurrencySystem.Instance.getMoney());
