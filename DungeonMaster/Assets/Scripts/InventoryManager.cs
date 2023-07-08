@@ -12,6 +12,15 @@ public class InventoryManager : GenericSingleton<InventoryManager>
     public Transform ItemContent;
     public GameObject InventoryItem;
 
+    public GameObject ItemToInstantiate;
+
+    public Items[] levelOnePrefabs;
+
+    public void Start()
+    {
+        GenerateRandomItem(new Vector2(0,0));
+    }
+
     public void Add(Items item)
     {
         items.Add(item);
@@ -22,6 +31,15 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         items.Remove(item);
     }
 
+    public void GenerateRandomItem(Vector2 position)
+    {
+        GameObject obj = Instantiate(ItemToInstantiate);
+        obj.transform.position = position;
+        int rand = Random.Range(0,levelOnePrefabs.Length);
+        obj.GetComponent<SpriteRenderer>().sprite = levelOnePrefabs[rand].image;
+        obj.GetComponent<ItemController>().Item = levelOnePrefabs[rand];
+        obj.GetComponent<ItemPickup>().item = levelOnePrefabs[rand];
+    }
 
     public void ListItems()
     {
