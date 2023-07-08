@@ -16,6 +16,8 @@ public class ItemPickup : MonoBehaviour
     {
         Debug.Log("Clicked");
         Pickup();
+
+        
     }
 
 }
