@@ -20,4 +20,9 @@ public class GridManager : MonoBehaviour
     {
         
     }
+
+    void CreateGrid()
+    {
+
+    }
 }
