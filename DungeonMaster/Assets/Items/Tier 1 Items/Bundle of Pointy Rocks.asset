@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf4da83413537d40be44a4685b0a882, type: 3}
   m_Name: Bundle of Pointy Rocks
   m_EditorClassIdentifier: 
-  itemName: Bundle of Pointy Rocks
+  itemName: Pointy Rock
   saleAmount: 1
   image: {fileID: 21300000, guid: 32ae9304da2072343b6166bfe5f0f4f9, type: 3}
+  AttackDamage: 7
+  Defense: 0
+  flavortext: Is... That a rock?
