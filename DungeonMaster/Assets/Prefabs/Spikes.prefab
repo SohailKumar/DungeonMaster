@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8299836774450708012}
   - component: {fileID: 2818026786772680377}
-  - component: {fileID: 2671156415656669715}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -85,17 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2671156415656669715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3844412407629754136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70cf0a4bd87ccc946b8fae63ed8f7bdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trapname: Spikes
-  cost: 100

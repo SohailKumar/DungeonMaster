@@ -8,6 +8,7 @@ using TMPro;
 public class InventoryManager : GenericSingleton<InventoryManager>
 {
     public List<Items> items = new List<Items>();
+    public List<Trap> traps = new List<Trap>();
 
     public Transform ItemContent;
     public GameObject InventoryItem;
@@ -76,6 +77,19 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             CardImage.sprite = item.image;
             CardFlavor.text = item.flavortext;
             CardAtkDef.text = item.AttackDamage + " Attack Damage\n" + item.Defense + " Defense";
+        }
+
+        foreach (var trap in traps)
+        {
+            GameObject obj = Instantiate(InventoryItem, ItemContent);
+            var trapName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
+            var trapIcon = obj.transform.Find("Image").GetComponent<Image>();
+            var trapID = obj.transform.GetComponent<ItemController>();
+
+            //itemID.Item = trap;
+            //itemName.text = trap.itemName;
+            //itemIcon.sprite = trap.image;
+
         }
     }
 
