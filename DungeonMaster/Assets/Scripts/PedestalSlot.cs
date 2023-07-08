@@ -7,12 +7,16 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
-        GameObject dropped = eventData.pointerDrag;
-        DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
-        if (draggableItem != null)
+        if (transform.childCount == 0)
         {
-            draggableItem.parentAfterDrag = transform;
+            GameObject dropped = eventData.pointerDrag;
+            DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
+            if (draggableItem != null)
+            {
+                draggableItem.parentAfterDrag = transform;
+            }
         }
+        
         
     }
 }
