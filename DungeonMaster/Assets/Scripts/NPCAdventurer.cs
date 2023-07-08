@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPCAdventurer : MonoBehaviour
 {
+    public int tier;
+
     public float speed = 0.05f;
     public float Maxhealth = 20;
     float health;
@@ -60,6 +62,7 @@ public class NPCAdventurer : MonoBehaviour
 
     public void Die()
     {
+        GameManager.enemiesLeft--;
         Destroy(gameObject);
     }
 
@@ -89,10 +92,8 @@ public class NPCAdventurer : MonoBehaviour
     {
         if (!knockedBack)
         {
-            Debug.Log("DMADL:KFJSDIUEIFJ");
             TakeDamage(dmg);
             TakeKnockback();
         }
-        
     }
 }
