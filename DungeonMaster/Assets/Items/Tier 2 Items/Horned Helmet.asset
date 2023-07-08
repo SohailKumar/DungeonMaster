@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf4da83413537d40be44a4685b0a882, type: 3}
-  m_Name: Sword
+  m_Name: Horned Helmet
   m_EditorClassIdentifier: 
-  itemName: Iron Sword
+  itemName: Horned Helmet
   saleAmount: 15
-  image: {fileID: 21300000, guid: 32ae9304da2072343b6166bfe5f0f4f9, type: 3}
+  image: {fileID: 21300000, guid: c1891cddc9e15c749a352a10b2239541, type: 3}
   AttackDamage: 5
-  Defense: 0
-  flavortext: A reilable weapon.
+  Defense: 10
+  flavortext: 
