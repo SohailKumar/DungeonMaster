@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SellingItems : MonoBehaviour
+public class BuyingItems : MonoBehaviour
 {
     [SerializeField] List<GameObject> shopPedestals = new List<GameObject>();
     
@@ -19,7 +19,7 @@ public class SellingItems : MonoBehaviour
         
     }
 
-    public void OnSell()
+    public void OnBuy()
     {
         foreach (GameObject item in shopPedestals)
         {

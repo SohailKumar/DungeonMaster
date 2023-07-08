@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ItemPickup : MonoBehaviour
 {
@@ -8,7 +10,10 @@ public class ItemPickup : MonoBehaviour
 
     void Pickup()
     {
+        var ItemId = gameObject.GetComponent<ItemController>().Item;
+        Debug.Log(ItemId);
         InventoryManager.Instance.Add(item);
+        
         Destroy(gameObject);
     }
 
