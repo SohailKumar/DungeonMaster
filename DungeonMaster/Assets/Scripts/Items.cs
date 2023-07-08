@@ -7,8 +7,11 @@ using UnityEngine;
 public class Items : ScriptableObject
 {
     // Start is called before the first frame update
-    public string itemName = "sword";
+    public string itemName = "";
     public int saleAmount;
     public Sprite image;
+    public int AttackDamage;
+    public int Defense;
+    public string flavortext = "";
 
 }
