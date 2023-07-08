@@ -21,16 +21,16 @@ public class SellingItems : MonoBehaviour
 
     public void OnSell()
     {
-        Debug.Log("Selling...");
         foreach (GameObject item in shopPedestals)
         {
             if (item.transform.childCount > 0)
             {
-                Debug.Log("SOLD!!!");
                 //TODO: ADD SELLING LOGIC
-                //item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount;
+                Debug.Log(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
+                CurrencySystem.Instance.addMoney(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
                 Destroy(item.transform.GetChild(0).gameObject);
             }
         }
+        Debug.Log(CurrencySystem.Instance.getMoney());
     }
 }
