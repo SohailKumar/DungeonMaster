@@ -37,7 +37,7 @@ public class InventoryManager : MonoBehaviour
             Destroy(item.gameObject);
         }
 
-            foreach (var item in items)
+        foreach (var item in items)
         {
 
             GameObject obj = Instantiate(InventoryItem, ItemContent);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SellingItems : MonoBehaviour
 {
@@ -36,5 +37,12 @@ public class SellingItems : MonoBehaviour
             }
         }
         Debug.Log(CurrencySystem.Instance.getMoney());
+        CurrencySystem.Instance.items = InventoryManager.Instance.items;
+        LoadDungeonScene();
+    }
+
+    private void LoadDungeonScene()
+    {
+        SceneManager.LoadScene("BattlerScene");
     }
 }

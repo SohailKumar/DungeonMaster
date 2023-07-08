@@ -16,6 +16,15 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 draggableItem.parentAfterDrag = transform;
             }
         }
+        else if(transform.name == "Inventory")
+        {
+            GameObject dropped = eventData.pointerDrag;
+            DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
+            if (draggableItem != null)
+            {
+                draggableItem.parentAfterDrag = transform.GetChild(0).GetChild(0);
+            }
+        }
         
         
     }
