@@ -23,6 +23,21 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         GenerateRandomItem(new Vector2(0, 0));
         GenerateRandomItem(new Vector2(0, 0));
         GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
     }
 
     public void AddItem(Items item)

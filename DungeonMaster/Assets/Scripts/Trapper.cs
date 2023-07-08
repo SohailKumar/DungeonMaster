@@ -17,7 +17,12 @@ public class Trapper : MonoBehaviour
 
         foreach(Collider2D col in hitColliders)
         {
-            col.GetComponent<NPCAdventurer>().TakeTrapDamage(damage);
+            Debug.Log(col.gameObject.name);
+            if (col.tag == "Adventurer")
+            {
+                col.GetComponent<NPCAdventurer>().TakeTrapDamage(damage);
+            }
+
         }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2746896070795209367}
   - component: {fileID: 116336824784976830}
   - component: {fileID: 1716438381935275394}
+  - component: {fileID: 6371923170559339648}
   m_Layer: 0
   m_Name: DisplayTrap
   m_TagString: Untagged
@@ -130,3 +131,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6371923170559339648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703310646014632575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071d5efbcb6130d469f47a8e21ba808d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 0
+  damage: 0

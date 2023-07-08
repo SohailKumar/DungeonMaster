@@ -8,7 +8,8 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
     public enum DropAcceptType
     {
         Item,
-        Trap
+        Trap,
+        All
     }
 
     public DropAcceptType dropAcceptType = DropAcceptType.Item;
@@ -18,7 +19,8 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
         GameObject dropped = eventData.pointerDrag;
 
         if (dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Trap
-            || !dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Item)
+            || !dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Item
+            || dropAcceptType == DropAcceptType.All)
         {
             if (transform.childCount == 0 || transform.name == "Content")
             {
