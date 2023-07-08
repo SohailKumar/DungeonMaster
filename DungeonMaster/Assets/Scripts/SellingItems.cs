@@ -5,6 +5,8 @@ using UnityEngine;
 public class SellingItems : MonoBehaviour
 {
     [SerializeField] List<GameObject> shopPedestals = new List<GameObject>();
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class SellingItems : MonoBehaviour
             {
                 Debug.Log("SOLD!!!");
                 //TODO: ADD SELLING LOGIC
-
+                //item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount;
                 Destroy(item.transform.GetChild(0).gameObject);
             }
         }
