@@ -38,9 +38,9 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             var itemIcon = obj.transform.Find("Image").GetComponent<Image>();
             var itemID = obj.transform.GetComponent<ItemController>();
 
-            Debug.Log(itemID);
+/*            Debug.Log(itemID);
             Debug.Log(itemName);
-            Debug.Log(itemIcon);
+            Debug.Log(itemIcon);*/
             itemID.Item = item;
             itemName.text = item.itemName;
             itemIcon.sprite = item.image;
