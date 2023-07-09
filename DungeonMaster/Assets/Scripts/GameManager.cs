@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     private GameObject currencyText;
 
     [SerializeField]
+    public static TextMeshProUGUI enemyCounterText;
+
+
+    [SerializeField]
     public GameObject[] traps;
     public static List<GameObject> trapInventory = new List<GameObject>();
     public static List<GameObject> trapActive = new List<GameObject>();
@@ -31,7 +35,6 @@ public class GameManager : MonoBehaviour
 
     public static int enemiesLeft;
     public static int totalEnemies;
-    public static TextMeshProUGUI enemyCounterText;
     public static TextMeshProUGUI buyButtonText;
     public static GameObject toBattleButton;
     public static InventoryButton inventoryButton;
@@ -96,7 +99,6 @@ public class GameManager : MonoBehaviour
 
         if (trapShop.activeSelf)
         {
-            buyButtonText.text = "To Store";
             trapShop.SetActive(false);
 
             if(Progression.roundNumber == 0)
@@ -106,7 +108,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            buyButtonText.text = "To Dungeon";
             trapShop.SetActive(true);
             InventoryManager.Instance.gameObject.SetActive(false);
             inventoryButton.isActive = false;

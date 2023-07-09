@@ -34,7 +34,7 @@ public class NPCAdventurer : MonoBehaviour
     {
         //GetComponentsInChildren<SpriteRenderer>()[3].color = Color.red;
         if (!knockedBack)
-            transform.position = new Vector2(transform.position.x+speed, transform.position.y);
+            transform.position = new Vector2(transform.position.x+speed*Time.deltaTime, transform.position.y);
         else
         {
             knockbackTimer += Time.deltaTime;

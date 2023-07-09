@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tier: 1
-  speed: 0.004
+  speed: 0.8
   Maxhealth: 60
   knockbackMax: 0.2
   damageMax: 0.4

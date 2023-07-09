@@ -2840,11 +2840,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Defenses can be dragged out of your inventory onto the White Tiles to
+  m_text: 'Defenses can be dragged out of your inventory onto the Front Tiles to
     "Place" them.
 
 
-    Equipment can be dragged onto the Green Tiles to support
+    Equipment can be dragged onto the Support Tiles to support
     your Defenses and give them buffs!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a4b69ca75f356204c89771eb323c0ef2, type: 2}
