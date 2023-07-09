@@ -15,7 +15,7 @@ public class SellingItems : MonoBehaviour
     {
         GameObject inventory = InventoryManager.Instance.gameObject;
         inventory.SetActive(true);
-        InventoryManager.Instance.InventorySizeForScene(new Vector2(930, 930), new Vector2(190, 220));
+        InventoryManager.Instance.InventorySizeForScene(new Vector2(1046, 920), new Vector2(160, 208));
     }
 
     // Update is called once per frame
