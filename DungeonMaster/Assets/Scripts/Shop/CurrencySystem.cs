@@ -20,11 +20,12 @@ public class CurrencySystem : GenericSingleton<CurrencySystem>
             money -= loseAmount;
             return true;
         }
-        else if (money < loseAmount)
-        {
-            money = 0;
-        }
         return false;
+    }
+
+    public void EnemyLoseMoney(int loseAmount)
+    {
+        money -= loseAmount;
     }
 
     public int getMoney()
