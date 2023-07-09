@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &116336824784976830
 SpriteRenderer:
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 0.4}
+  m_Size: {x: 1, y: 0.4}
   m_EdgeRadius: 0
 --- !u!114 &6371923170559339648
 MonoBehaviour:
@@ -147,6 +147,7 @@ MonoBehaviour:
   attackSpeed: 0
   damage: 0
   particleEffect: {fileID: 5467222962842581106, guid: 7824ad3b36a60694b9991647fed4b8f3, type: 3}
+  knockback: 0
   upgradeDmg: {fileID: 0}
 --- !u!95 &7646100888854847882
 Animator:

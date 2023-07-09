@@ -14,4 +14,5 @@ public class Trap : ScriptableObject
     public int damage;
     public float atkSpeed;
     public UnityEditor.Animations.AnimatorController animator;
+    public bool knockback;
 }

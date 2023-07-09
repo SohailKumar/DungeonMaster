@@ -211,7 +211,7 @@ Animator:
   m_GameObject: {fileID: 4088774678876945943}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1a67c5b21be077246add9526225b3507, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6adffb8c49e134147858c5f13349fbee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1205734879, guid: 219b11c3da8f4f6479555feaf6b65188, type: 3}
+  m_Sprite: {fileID: 1084582623, guid: 943a542ec1dee684ca2bfb73c538d725, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 5967151338304607785}
   - component: {fileID: 2207268826133103636}
   m_Layer: 0
-  m_Name: BarbarianBoy
+  m_Name: Knight
   m_TagString: Adventurer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +309,7 @@ Transform:
   - {fileID: 8659013373229187235}
   - {fileID: 1633211432885366432}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7719686712099203156
 SpriteRenderer:
@@ -375,13 +375,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e93a8b2ba0f0949a899fc43de7cb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tier: 1
+  tier: 2
   speed: 0.004
-  Maxhealth: 60
-  knockbackMax: 0.2
+  Maxhealth: 100
+  knockbackMax: 0.3
   damageMax: 0.6
-  knockbackForce: 0.006
-  mouseAttackMax: 1
+  knockbackForce: 0.01
+  mouseAttackMax: 0.6
   damageTimer: 0
 --- !u!61 &2207268826133103636
 BoxCollider2D:

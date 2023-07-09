@@ -309,7 +309,7 @@ Transform:
   - {fileID: 8659013373229187235}
   - {fileID: 1633211432885366432}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7719686712099203156
 SpriteRenderer:
@@ -375,11 +375,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e93a8b2ba0f0949a899fc43de7cb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tier: 1
-  speed: 0.005
-  Maxhealth: 20
-  knockbackMax: 0.5
-  knockbackForce: 0.01
+  tier: 2
+  speed: 0.008
+  Maxhealth: 50
+  knockbackMax: 0.065
+  damageMax: 0.6
+  knockbackForce: 0.02
+  mouseAttackMax: 0.6
+  damageTimer: 0
 --- !u!61 &2207268826133103636
 BoxCollider2D:
   m_ObjectHideFlags: 0

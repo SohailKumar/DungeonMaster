@@ -37,6 +37,7 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
                 if (draggableItem != null)
                 {
+                    source = GameObject.Find("Canvas/InventoryManager").GetComponent<AudioSource>();
                     source.PlayOneShot(clip);
                     draggableItem.parentAfterDrag = transform;
                     draggableItem.GetComponent<Image>().color = new Color(draggableItem.GetComponent<Image>().color.r, draggableItem.GetComponent<Image>().color.g, draggableItem.GetComponent<Image>().color.b, 0);

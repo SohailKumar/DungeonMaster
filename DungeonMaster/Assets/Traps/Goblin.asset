@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Goblin
   m_EditorClassIdentifier: 
   trapname: Goblin
-  cost: 15
+  cost: 30
   image: {fileID: -1981838490, guid: 2d0c9ac00ef6282419f06feac2acc65b, type: 3}
-  damage: 10
-  atkSpeed: 5
+  damage: 25
+  atkSpeed: 1.4
   animator: {fileID: 9100000, guid: 5413cda0740764945a59b49465c6c2c4, type: 2}
+  knockback: 0
