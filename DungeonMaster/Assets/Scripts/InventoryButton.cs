@@ -14,6 +14,7 @@ public class InventoryButton : MonoBehaviour
         inventory = InventoryManager.Instance.gameObject;
         inventory.SetActive(false);
         InventoryManager.Instance.InventorySizeForScene(new Vector2(982, 940), new Vector2(146, 130));
+        InventoryManager.Instance.gameObject.GetComponentInChildren<Image>().color = new Color(255, 255, 255, 125);
     }
 
     // Update is called once per frame
