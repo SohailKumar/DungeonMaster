@@ -115,7 +115,6 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             trapID.isTrap = true;
             trapName.text = trap.trapname;
             trapIcon.sprite = trap.image;
-
         }
     }
 
