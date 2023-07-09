@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class TrapPlacementSlot : MonoBehaviour
 {
-    [SerializeField] public List<GameObject> upgrades = new List<GameObject>();
     [SerializeField] GameObject displayTrap;
     GameObject trap;
     bool hasGenerated = false;
-    public int additionalAttack = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +29,6 @@ public class TrapPlacementSlot : MonoBehaviour
             Destroy(trap);
             hasGenerated = false;
         }
-
-        additionalAttack = 0;
-        foreach (GameObject obj in upgrades)
-        {
-            if (obj.transform.childCount > 0)
-            {
-                additionalAttack += obj.GetComponentInChildren<ItemController>().Item.AttackDamage;
-            }
-        }
     }
 
     void GenerateTrap()
@@ -47,7 +37,6 @@ public class TrapPlacementSlot : MonoBehaviour
         Trapper trapper = displayTrap.GetComponent<Trapper>();
         trapper.damage = transform.GetComponentInChildren<ItemController>().Trap.damage;
         trapper.attackSpeed = transform.GetComponentInChildren<ItemController>().Trap.atkSpeed;
-        trapper.upgradeDmg = this;
         trap = Instantiate(displayTrap, new Vector3(Camera.main.ScreenToWorldPoint(transform.position).x, Camera.main.ScreenToWorldPoint(transform.position).y + 1), transform.rotation);
     }
 

@@ -23,7 +23,6 @@ public class TrapInfo : MonoBehaviour
 
         trapName = trapList[randomTrap].trapname;
         trapPrice = trapList[randomTrap].cost;
-        transform.GetChild(2).GetComponent<Image>().sprite = trapList[randomTrap].image;
 
         textObjects = GetComponentsInChildren<TextMeshProUGUI>();
         textObjects[0].text = trapName;
