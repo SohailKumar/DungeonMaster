@@ -50,7 +50,7 @@ public class TrapPlacementSlot : MonoBehaviour
         Trapper trapper = displayTrap.GetComponent<Trapper>();
         trapper.damage = transform.GetComponentInChildren<ItemController>().Trap.damage;
         trapper.attackSpeed = transform.GetComponentInChildren<ItemController>().Trap.atkSpeed;
-       
+        trapper.knockback = transform.GetComponentInChildren<ItemController>().Trap.knockback;
         trapper.upgradeDmg = this;
         trap = Instantiate(displayTrap, new Vector3(Camera.main.ScreenToWorldPoint(transform.position).x+1.1f, Camera.main.ScreenToWorldPoint(transform.position).y + 1.63f), transform.rotation);
     }
