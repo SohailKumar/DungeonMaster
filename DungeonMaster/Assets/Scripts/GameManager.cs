@@ -40,9 +40,9 @@ public class GameManager : MonoBehaviour
         enemyCounterText = GameObject.Find("EnemyCounter").GetComponent<TextMeshProUGUI>();
         enemyCounterText.text = "";
 
-        CurrencySystem.currencyText = GameObject.Find("CurrentMoney").GetComponent<TextMeshProUGUI>();
+        //CurrencySystem.currencyText = GameObject.Find("CurrentMoney").GetComponent<TextMeshProUGUI>();
         CurrencySystem.Instance.addMoney(400);
-        CurrencySystem.Instance.setMoneyText();
+        //CurrencySystem.Instance.setMoneyText();
 
         if(curScreen == Screen.Dungeon)
         {
