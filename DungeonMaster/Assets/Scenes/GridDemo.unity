@@ -574,7 +574,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 220}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &660299978
 MonoBehaviour:
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
-  m_VerticalFit: 0
+  m_VerticalFit: 1
 --- !u!114 &660299980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,6 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67d343c6ba969640919f4ff132e36c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropAcceptType: 2
 --- !u!1 &737176047
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,8 +683,8 @@ MonoBehaviour:
   m_Content: {fileID: 660299977}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: 0.05
+  m_MovementType: 2
+  m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 7
@@ -747,6 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67d343c6ba969640919f4ff132e36c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropAcceptType: 0
 --- !u!1 &780143838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+  traps: []
   ItemContent: {fileID: 660299977}
   InventoryItem: {fileID: 3096812457557359583, guid: 85b4eb21666bde14b971937eeb12024e, type: 3}
   ItemToInstantiate: {fileID: 927976460406255368, guid: 0936be6e7bf250a40810e32865b760a4, type: 3}
@@ -1198,7 +1201,7 @@ MonoBehaviour:
   - {fileID: 1879162276}
   - {fileID: 337170412}
   - {fileID: 208083985}
-  moneyDrop: {fileID: 0}
+  moneyDrop: {fileID: 21300000, guid: 9b929333f192c894c89ffa3d2e61b7b9, type: 3}
 --- !u!114 &1530805955
 MonoBehaviour:
   m_ObjectHideFlags: 0

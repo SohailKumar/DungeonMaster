@@ -8,6 +8,7 @@ using TMPro;
 public class InventoryManager : GenericSingleton<InventoryManager>
 {
     public List<Items> items = new List<Items>();
+    public List<Trap> traps = new List<Trap>();
 
     public Transform ItemContent;
     public GameObject InventoryItem;
@@ -22,16 +23,41 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         GenerateRandomItem(new Vector2(0, 0));
         GenerateRandomItem(new Vector2(0, 0));
         GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0));
     }
 
-    public void Add(Items item)
+    public void AddItem(Items item)
     {
         items.Add(item);
     }
     
-    public void Remove(Items item)
+    public void RemoveItem(Items item)
     {
         items.Remove(item);
+    }
+
+    public void AddTrap(Trap trap)
+    {
+        traps.Add(trap);
+    }
+
+    public void RemoveTrap(Trap trap)
+    {
+        traps.Remove(trap);
     }
 
     public void GenerateRandomItem(Vector2 position)
@@ -76,6 +102,20 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             CardImage.sprite = item.image;
             CardFlavor.text = item.flavortext;
             CardAtkDef.text = item.AttackDamage + " Attack Damage\n" + item.Defense + " Defense";
+        }
+
+        foreach (var trap in traps)
+        {
+            GameObject obj = Instantiate(InventoryItem, ItemContent);
+            var trapName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
+            var trapIcon = obj.transform.Find("Image").GetComponent<Image>();
+            var trapID = obj.transform.GetComponent<ItemController>();
+
+            trapID.Trap = trap;
+            trapID.isTrap = true;
+            trapName.text = trap.trapname;
+            trapIcon.sprite = trap.image;
+
         }
     }
 

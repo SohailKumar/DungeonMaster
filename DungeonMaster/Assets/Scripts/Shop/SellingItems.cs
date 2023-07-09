@@ -11,10 +11,17 @@ public class SellingItems : MonoBehaviour
 
     private float loadTimer = -10f;
 
+    private void Awake()
+    {
+        GameObject inventory = InventoryManager.Instance.gameObject;
+        inventory.SetActive(true);
+        InventoryManager.Instance.InventorySizeForScene(new Vector2(930, 930), new Vector2(190, 220));
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(loadTimer > -5)
+        if (loadTimer > -5)
         {
             loadTimer -= Time.deltaTime;
             if(loadTimer < 0f)
@@ -45,7 +52,7 @@ public class SellingItems : MonoBehaviour
 
                 //Deletes Item from InventoryManager
                 Items deletedItem = item.transform.GetChild(0).GetComponent<ItemController>().Item;
-                InventoryManager.Instance.Remove(deletedItem);
+                InventoryManager.Instance.RemoveItem(deletedItem);
             }
         }
         Debug.Log(CurrencySystem.Instance.getMoney());
@@ -54,7 +61,7 @@ public class SellingItems : MonoBehaviour
 
     private void LoadDungeonScene()
     {
-        InventoryManager.Instance.InventorySizeForScene(new Vector2(800, 510), new Vector2(190, 100));
+        //InventoryManager.Instance.InventorySizeForScene(new Vector2(800, 510), new Vector2(190, 100));
         SceneManager.LoadScene("BattlerScene");
     }
 }

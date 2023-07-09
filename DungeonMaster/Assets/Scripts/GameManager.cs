@@ -25,14 +25,18 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject trapShop;
-    private GameObject afterBattleScreen;
+    private static GameObject afterBattleScreen;
     //private static GameObject trapSelector;
 
     public static int enemiesLeft;
     public static int totalEnemies;
+    public static TextMeshProUGUI enemyCounterText;
 
     public void Awake()
     {
+        enemyCounterText = GameObject.Find("EnemyCounter").GetComponent<TextMeshProUGUI>();
+        enemyCounterText.text = "";
+
         CurrencySystem.currencyText = GameObject.Find("CurrentMoney").GetComponent<TextMeshProUGUI>();
         CurrencySystem.Instance.addMoney(400);
         CurrencySystem.Instance.setMoneyText();
@@ -83,5 +87,16 @@ public class GameManager : MonoBehaviour
         //start spawner
         int[] ar = { 1, 1, 1, 1 };
         GameObject.Find("Spawner").GetComponent<EnemySpawner>().StartSpawner(ar, 3);
+    }
+
+    public static void ReduceEnemies()
+    {
+        enemiesLeft--;
+        enemyCounterText.text = enemiesLeft.ToString() + "/" + totalEnemies.ToString() + " Enemies";
+
+        if (enemiesLeft == 0)
+        {
+            afterBattleScreen.SetActive(true);
+        }
     }
 }

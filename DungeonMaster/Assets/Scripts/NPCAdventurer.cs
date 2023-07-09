@@ -62,7 +62,7 @@ public class NPCAdventurer : MonoBehaviour
 
     public void Die()
     {
-        GameManager.enemiesLeft--;
+        GameManager.ReduceEnemies();
         Destroy(gameObject);
     }
 
