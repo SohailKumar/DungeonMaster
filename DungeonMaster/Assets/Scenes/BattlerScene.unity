@@ -145,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &28951652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1404,7 +1404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &734067276
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3413,6 +3413,7 @@ MonoBehaviour:
   - {fileID: 1795385340}
   - {fileID: 1897883531}
   addDefense: 0
+  canvas: {fileID: 894044398}
 --- !u!61 &1577290153
 BoxCollider2D:
   m_ObjectHideFlags: 0
