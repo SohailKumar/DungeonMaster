@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         return sum;
     }
 
-    public void OpenTrapShop()
+    public void ToggleTrapShop()
     {
         if(isBattling) 
         {
