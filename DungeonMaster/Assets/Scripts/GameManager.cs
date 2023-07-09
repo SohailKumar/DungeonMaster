@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour
     public static TextMeshProUGUI buyButtonText;
     public static GameObject toBattleButton;
     public static InventoryButton inventoryButton;
+
+    public string[] levels;
 
     public bool isBattling = false;
     public void Awake()
@@ -107,17 +110,22 @@ public class GameManager : MonoBehaviour
 
     public void StartBattle()
     {
+        
+
         toBattleButton.SetActive(false);
         trapShop.SetActive(false);
         InventoryManager.Instance.gameObject.SetActive(false);
         inventoryButton.gameObject.SetActive(false);
         GameObject.Find("BuyButton").SetActive(false);
-        //SET ANY NON BATTLE UI INACTIVE HERE!
         isBattling = true;
 
         //start spawner
-        int[] ar = { 1, 1, 1, 1 };
+        int[] ar = {1,1};
+        Debug.Log(Progression.roundNumber);
+        ar = Array.ConvertAll(levels[Progression.roundNumber].Trim().Split(" "), s => int.Parse(s));
         GameObject.Find("Spawner").GetComponent<EnemySpawner>().StartSpawner(ar, 3);
+
+        Progression.roundNumber++;
     }
 
     public static void ReduceEnemies()

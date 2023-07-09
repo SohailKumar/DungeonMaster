@@ -56,9 +56,7 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 {
                     InventoryManager.Instance.RemoveItem(dropped.GetComponent<ItemController>().Item);
                     dropped.GetComponent<DraggableItem>().isRemoved = true;
-                    Debug.Log("Remove1");
                 }
-                Debug.Log("drop");
             }
             else if (transform.name == "Content")
             {

@@ -17,6 +17,7 @@ public class InventoryManager : GenericSingleton<InventoryManager>
     public GameObject ItemToInstantiate;
 
     public Items[] levelOnePrefabs;
+    public Items[] levelTwoPrefabs;
 
     public void Start()
     {

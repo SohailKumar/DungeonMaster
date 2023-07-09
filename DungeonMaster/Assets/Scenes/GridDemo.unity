@@ -1201,6 +1201,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad8556130647cba4da025d72b79dde0b, type: 2}
   - {fileID: 11400000, guid: cf47a9e9e80e80e4d8b35ad3ebb7febc, type: 2}
   - {fileID: 11400000, guid: 03df2c94e2af3134ca9b606f74b7b9fe, type: 2}
+  levelTwoPrefabs:
+  - {fileID: 11400000, guid: 1dbf4a1d71067d44889af8315f799726, type: 2}
+  - {fileID: 11400000, guid: 835701c4ef734e345b62f39aeba396c8, type: 2}
+  - {fileID: 11400000, guid: d032edf2e41639e4695a8fc27e7298cf, type: 2}
+  - {fileID: 11400000, guid: 4a74921b5a4ba9446a449e20145ff002, type: 2}
+  - {fileID: 11400000, guid: 5e29785e6bd2e654aac2018dfcda2ffa, type: 2}
+  - {fileID: 11400000, guid: 1d194941316fef944ad35872821300cd, type: 2}
+  - {fileID: 11400000, guid: a162d10db4e04be4ebdf8d70abfed0c0, type: 2}
+  - {fileID: 11400000, guid: 5f2b06478b4a29348a7896036db535af, type: 2}
 --- !u!82 &1384436354
 AudioSource:
   m_ObjectHideFlags: 0

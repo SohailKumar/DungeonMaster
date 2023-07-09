@@ -11,7 +11,6 @@ public class ItemPickup : MonoBehaviour
     void Pickup()
     {
         var ItemId = gameObject.GetComponent<ItemController>().Item;
-        Debug.Log(ItemId);
         InventoryManager.Instance.AddItem(item);
         InventoryManager.Instance.ListItems();
 
@@ -21,7 +20,6 @@ public class ItemPickup : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Clicked");
         Pickup();
     }
 

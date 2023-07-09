@@ -10,13 +10,9 @@ public class MainMenuManager : MonoBehaviour
 
     public GameObject creditsPanel;
 
-    private void Start()
-    {
-
-        
-    }
     public void StartGame()
     {
+        Progression.roundNumber = 0;
         source.PlayOneShot(clip);
         SceneManager.LoadScene("GridDemo");
     }

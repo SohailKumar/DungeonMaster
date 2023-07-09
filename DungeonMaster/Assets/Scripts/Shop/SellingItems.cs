@@ -43,7 +43,7 @@ public class SellingItems : MonoBehaviour
             {
                 //TODO: ADD SELLING LOGIC
                 //Debug.Log(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
-                source.PlayOneShot(clip);
+                //source.PlayOneShot(clip);
 
                 CurrencySystem.Instance.addMoney(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
 
@@ -61,7 +61,7 @@ public class SellingItems : MonoBehaviour
                 InventoryManager.Instance.RemoveItem(deletedItem);
             }
         }
-        Debug.Log(CurrencySystem.Instance.getMoney());
+        //Debug.Log(CurrencySystem.Instance.getMoney());
         loadTimer = 2f;
     }
 

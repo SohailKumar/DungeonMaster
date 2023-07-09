@@ -51,7 +51,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             Debug.Log("Left click");*/
         if (eventData.button == PointerEventData.InputButton.Right)
             PopupInfo(true);
-            Debug.Log("Right click");
     }
 
     private void PopupInfo(bool show)
