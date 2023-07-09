@@ -18,14 +18,17 @@ public class NPCAdventurer : MonoBehaviour
 
     public float mouseAttackMax = 0.6f;
     private float mouseAttackTimer;
-    
 
+    private AudioSource source;
+    [SerializeField] private AudioClip ouchieSound;
+    [SerializeField] private AudioClip deathSound;
     [SerializeField] private float damageTimer = 0f;
     private bool damaged = false;
 
 
     private void Start()
     {
+        source = GameObject.Find("cavebg").GetComponent<AudioSource>();
         health = Maxhealth;
     }
 
@@ -73,6 +76,7 @@ public class NPCAdventurer : MonoBehaviour
     {
         if (!damaged)
         {
+            source.PlayOneShot(ouchieSound);
             damaged = true;
             damageTimer = damageMax;
             health -= damage;
@@ -93,6 +97,7 @@ public class NPCAdventurer : MonoBehaviour
 
     public void Die()
     {
+        source.PlayOneShot(deathSound);
         GameManager.ReduceEnemies();
         InventoryManager.Instance.droppedItems.Add(InventoryManager.Instance.GenerateRandomItem(new Vector2(transform.position.x,transform.position.y+0.5f), tier));
         Destroy(gameObject);

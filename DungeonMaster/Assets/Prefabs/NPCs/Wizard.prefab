@@ -382,6 +382,8 @@ MonoBehaviour:
   damageMax: 0.02
   knockbackForce: 0.01
   mouseAttackMax: 0.6
+  ouchieSound: {fileID: 8300000, guid: 68c5a9a39bfc35241abb95a8402ebd57, type: 3}
+  deathSound: {fileID: 8300000, guid: c2cc83a531f67cb429f6e2de6f8b6449, type: 3}
   damageTimer: 0
 --- !u!61 &2207268826133103636
 BoxCollider2D:

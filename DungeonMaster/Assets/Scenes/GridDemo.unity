@@ -1045,6 +1045,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1d194941316fef944ad35872821300cd, type: 2}
   - {fileID: 11400000, guid: a162d10db4e04be4ebdf8d70abfed0c0, type: 2}
   - {fileID: 11400000, guid: 5f2b06478b4a29348a7896036db535af, type: 2}
+  pickupSound: {fileID: 8300000, guid: 1540dabec92ac85419bf9dab72b1318a, type: 3}
 --- !u!82 &1384436354
 AudioSource:
   m_ObjectHideFlags: 0

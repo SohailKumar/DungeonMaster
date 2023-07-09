@@ -19,6 +19,8 @@ public class InventoryManager : GenericSingleton<InventoryManager>
     public Items[] levelOnePrefabs;
     public Items[] levelTwoPrefabs;
 
+    public AudioClip pickupSound;
+
     public void Start()
     {
         GenerateRandomItem(new Vector2(-3.85f, -3.6f), 1);
