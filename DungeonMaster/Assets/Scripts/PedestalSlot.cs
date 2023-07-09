@@ -22,6 +22,7 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        source = GameObject.Find("Canvas/InventoryManager").GetComponent<AudioSource>();
         GameObject dropped = eventData.pointerDrag;
         if (dropped.GetComponent<ItemController>() == null)
         {

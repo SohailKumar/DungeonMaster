@@ -18,8 +18,10 @@ public class SellingItems : MonoBehaviour
     {
         GameObject inventory = InventoryManager.Instance.gameObject;
         inventory.SetActive(true);
+        source = GameObject.Find("Canvas/InventoryManager").GetComponent<AudioSource>();
         InventoryManager.Instance.InventorySizeForScene(new Vector2(1000, 920), new Vector2(160, 208));
         InventoryManager.Instance.gameObject.GetComponentInChildren<Image>().color = new Color(255, 255, 255, 0);
+        /*source = this.GetComponent<AudioSource>();*/
     }
 
     // Update is called once per frame
@@ -43,6 +45,8 @@ public class SellingItems : MonoBehaviour
             {
                 //TODO: ADD SELLING LOGIC
                 //Debug.Log(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
+                source = GameObject.Find("Canvas/InventoryManager").GetComponent<AudioSource>();
+
                 source.PlayOneShot(clip);
 
                 CurrencySystem.Instance.addMoney(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
