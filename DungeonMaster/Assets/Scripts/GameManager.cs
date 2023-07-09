@@ -150,10 +150,10 @@ public class GameManager : MonoBehaviour
     {
         enemiesLeft--;
         enemyCounterText.text = enemiesLeft.ToString() + "/" + totalEnemies.ToString() + " Enemies";
-        source.Stop();
+        
         if (enemiesLeft == 0)
         {
-            
+            source.Stop();
             afterBattleScreen.SetActive(true);
         }
     }
