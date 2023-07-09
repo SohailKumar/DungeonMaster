@@ -62,7 +62,7 @@ public class NPCAdventurer : MonoBehaviour
     public void Die()
     {
         GameManager.ReduceEnemies();
-        InventoryManager.Instance.droppedItems.Add(InventoryManager.Instance.GenerateRandomItem(new Vector2(transform.position.x,transform.position.y+0.5f)));
+        InventoryManager.Instance.droppedItems.Add(InventoryManager.Instance.GenerateRandomItem(new Vector2(transform.position.x,transform.position.y+0.5f), tier));
         Destroy(gameObject);
     }
 
