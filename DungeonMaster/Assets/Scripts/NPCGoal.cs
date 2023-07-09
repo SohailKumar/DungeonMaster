@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCGoal : MonoBehaviour
 {
@@ -36,6 +37,15 @@ public class NPCGoal : MonoBehaviour
             {
                 addDefense += obj.GetComponentInChildren<ItemController>().Item.Defense;
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (CurrencySystem.Instance.getMoney() <= 0)
+        {
+            // Player Loses
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
