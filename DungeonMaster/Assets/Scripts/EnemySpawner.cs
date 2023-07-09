@@ -11,12 +11,12 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] 
     private GameObject[] NPCsT3;
 
-    public void StartSpawner(int[] enemies, int spawnDelay)
+    public void StartSpawner(int[] enemies, float spawnDelay)
     {
         StartCoroutine(SpawnerStart(enemies, spawnDelay));
     }
 
-    IEnumerator SpawnerStart(int[] enemies, int spawnDelay)
+    IEnumerator SpawnerStart(int[] enemies, float spawnDelay)
     {
         GameManager.totalEnemies = enemies.Length;
         GameManager.enemiesLeft = GameManager.totalEnemies;

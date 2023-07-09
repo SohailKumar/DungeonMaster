@@ -120,10 +120,14 @@ public class GameManager : MonoBehaviour
         isBattling = true;
 
         //start spawner
+        string[] things = levels[Progression.roundNumber].Trim().Split(",");
+        string spawnTiers = things[0];
+        float spawnDelay = float.Parse(things[1]);
+        
+
         int[] ar = {1,1};
-        Debug.Log(Progression.roundNumber);
-        ar = Array.ConvertAll(levels[Progression.roundNumber].Trim().Split(" "), s => int.Parse(s));
-        GameObject.Find("Spawner").GetComponent<EnemySpawner>().StartSpawner(ar, 3);
+        ar = Array.ConvertAll(spawnTiers.Trim().Split(" "), s => int.Parse(s));
+        GameObject.Find("Spawner").GetComponent<EnemySpawner>().StartSpawner(ar, spawnDelay);
 
         Progression.roundNumber++;
     }

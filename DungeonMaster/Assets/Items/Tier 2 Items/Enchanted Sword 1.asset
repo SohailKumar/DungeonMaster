@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enchanted Sword 1
   m_EditorClassIdentifier: 
   itemName: Pointy Rock Club
-  saleAmount: 4
+  saleAmount: 20
   image: {fileID: 21300000, guid: 32ae9304da2072343b6166bfe5f0f4f9, type: 3}
   AttackDamage: 11
   Defense: 0
