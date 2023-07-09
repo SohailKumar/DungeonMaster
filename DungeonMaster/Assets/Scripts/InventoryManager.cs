@@ -111,6 +111,9 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             var trapIcon = obj.transform.Find("Image").GetComponent<Image>();
             var trapID = obj.transform.GetComponent<ItemController>();
 
+            obj.transform.GetComponent<DraggableItem>().canOpenPopup = false;
+            obj.transform.GetComponent<Image>().color = new Color(251/255f, 145/255f, 145 / 255f);
+
             trapID.Trap = trap;
             trapID.isTrap = true;
             trapName.text = trap.trapname;

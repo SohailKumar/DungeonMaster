@@ -11,6 +11,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField] public Transform parentAfterDrag;
     public bool isTrap;
     public bool isRemoved;
+    public bool canOpenPopup = true;
 
     private Canvas infoCard;
 
@@ -47,8 +48,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
  
     public void OnPointerClick(PointerEventData eventData)
     {
-        /*if (eventData.button == PointerEventData.InputButton.Left)
-            Debug.Log("Left click");*/
         if (eventData.button == PointerEventData.InputButton.Right)
             PopupInfo(true);
             Debug.Log("Right click");
@@ -56,6 +55,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private void PopupInfo(bool show)
     {
-        infoCard.transform.GetChild(0).gameObject.SetActive(show);
+        if(canOpenPopup)
+            infoCard.transform.GetChild(0).gameObject.SetActive(show);
     }
 }
