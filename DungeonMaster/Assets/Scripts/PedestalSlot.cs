@@ -6,7 +6,11 @@ using UnityEngine.UI;
 using TMPro;
 
 public class PedestalSlot : MonoBehaviour, IDropHandler
+
 {
+    public AudioSource source;
+    public AudioClip clip;
+
     public enum DropAcceptType
     {
         Item,
@@ -33,6 +37,7 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
                 if (draggableItem != null)
                 {
+                    source.PlayOneShot(clip);
                     draggableItem.parentAfterDrag = transform;
                     draggableItem.GetComponent<Image>().color = new Color(draggableItem.GetComponent<Image>().color.r, draggableItem.GetComponent<Image>().color.g, draggableItem.GetComponent<Image>().color.b, 0);
                     draggableItem.GetComponentInChildren<TextMeshProUGUI>().color = 
@@ -60,6 +65,7 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
                 if (draggableItem != null)
                 {
+                    source.PlayOneShot(clip);
                     draggableItem.parentAfterDrag = transform;
                     draggableItem.GetComponent<Image>().color = new Color(draggableItem.GetComponent<Image>().color.r, draggableItem.GetComponent<Image>().color.g, draggableItem.GetComponent<Image>().color.b, 255);
                     draggableItem.GetComponentInChildren<TextMeshProUGUI>().color = 
@@ -84,6 +90,7 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
                 if (draggableItem != null)
                 {
+                    source.PlayOneShot(clip);
                     draggableItem.parentAfterDrag = transform.GetChild(0).GetChild(0);
                     draggableItem.GetComponent<Image>().color = new Color(draggableItem.GetComponent<Image>().color.r, draggableItem.GetComponent<Image>().color.g, draggableItem.GetComponent<Image>().color.b, 255);
                     draggableItem.GetComponentInChildren<TextMeshProUGUI>().color =

@@ -9,6 +9,9 @@ public class SellingItems : MonoBehaviour
     [SerializeField] List<GameObject> shopPedestals = new List<GameObject>();
     [SerializeField] Sprite moneyDrop;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     private float loadTimer = -10f;
 
     private void Awake()
@@ -40,6 +43,8 @@ public class SellingItems : MonoBehaviour
             {
                 //TODO: ADD SELLING LOGIC
                 //Debug.Log(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
+                source.PlayOneShot(clip);
+
                 CurrencySystem.Instance.addMoney(item.transform.GetChild(0).GetComponent<ItemController>().Item.saleAmount);
 
                 GameObject money = new GameObject();
