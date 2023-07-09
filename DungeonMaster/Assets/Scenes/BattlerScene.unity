@@ -1384,7 +1384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCsT1:
   - {fileID: 8526626269594454957, guid: a16de88b59ffa794ea571415985847e4, type: 3}
-  NPCsT2: []
+  NPCsT2:
+  - {fileID: 8526626269594454957, guid: 98c88a0d94c3ae349ba6f905ebe3f7ef, type: 3}
   NPCsT3: []
 --- !u!4 &634212680
 Transform:
@@ -3479,7 +3480,7 @@ MonoBehaviour:
   - {fileID: 3844412407629754136, guid: 95ad602391882644082f2878c30aba60, type: 3}
   trapShop: {fileID: 0}
   levels:
-  - 1
+  - 2
   - 1 1
   - 1 1 1 1
   - 1 2 2
