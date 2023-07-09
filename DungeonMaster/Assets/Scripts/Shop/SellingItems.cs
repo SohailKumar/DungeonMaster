@@ -37,6 +37,21 @@ public class SellingItems : MonoBehaviour
 
     public void OnSell()
     {
+        if(loadTimer > 0)
+        {
+            return;
+        }
+
+        bool canPress = false;
+        foreach (GameObject item in shopPedestals)
+        {
+            if (item.transform.childCount > 0)
+                canPress = true;
+        }
+
+        if (!canPress)
+            return;
+
         foreach (GameObject item in shopPedestals)
         {
             if (item.transform.childCount > 0)
@@ -63,7 +78,11 @@ public class SellingItems : MonoBehaviour
             }
         }
         //Debug.Log(CurrencySystem.Instance.getMoney());
-        loadTimer = 2f;
+
+        if(loadTimer < 0)
+            loadTimer = 2f;
+
+        gameObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
     }
 
     private void LoadDungeonScene()

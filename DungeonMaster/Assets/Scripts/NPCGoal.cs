@@ -42,7 +42,7 @@ public class NPCGoal : MonoBehaviour
 
     private void Update()
     {
-        if (CurrencySystem.Instance.getMoney() <= 0)
+        if (CurrencySystem.Instance.getMoney() < 0)
         {
             // Player Loses
             SceneManager.LoadScene("MainMenu");

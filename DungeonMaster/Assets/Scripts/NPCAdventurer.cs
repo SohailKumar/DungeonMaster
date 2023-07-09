@@ -30,7 +30,7 @@ public class NPCAdventurer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //GetComponentsInChildren<SpriteRenderer>()[3].color = Color.red;
         if (!knockedBack)
