@@ -347,20 +347,40 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7f47904dfd00bad42b1e8e51ba4d5a6a, type: 2}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
       propertyPath: trapList.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
-      propertyPath: trapList.Array.data[1]
+      propertyPath: trapList.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: cac9ea2da313de84e8b46fde2565cf87, type: 2}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
-      propertyPath: trapList.Array.data[2]
+      propertyPath: trapList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 6718394a1fd93024d8f3bbb105268799, type: 2}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
-      propertyPath: trapList.Array.data[3]
+      propertyPath: trapList.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: f0062f5a96656b042a0eee1e2cf13a46, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c90e132fc9789541ab55b721a171f81, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: cdbff6ba0f54f534a89744f532ad64ac, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 369df865d1ccf3e448c31f40008d6c99, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37dfb924f7e5d364f8ef842897fc30f1, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37dfb924f7e5d364f8ef842897fc30f1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3136,8 +3156,12 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7f47904dfd00bad42b1e8e51ba4d5a6a, type: 2}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
       propertyPath: trapList.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 369df865d1ccf3e448c31f40008d6c99, type: 2}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
       propertyPath: trapList.Array.data[1]
       value: 
@@ -3150,6 +3174,18 @@ PrefabInstance:
       propertyPath: trapList.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: f0062f5a96656b042a0eee1e2cf13a46, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37dfb924f7e5d364f8ef842897fc30f1, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: cdbff6ba0f54f534a89744f532ad64ac, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c90e132fc9789541ab55b721a171f81, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3480,7 +3516,7 @@ MonoBehaviour:
   - {fileID: 3844412407629754136, guid: 95ad602391882644082f2878c30aba60, type: 3}
   trapShop: {fileID: 0}
   levels:
-  - 2
+  - 1
   - 1 1
   - 1 1 1 1
   - 1 2 2
@@ -4290,8 +4326,12 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7f47904dfd00bad42b1e8e51ba4d5a6a, type: 2}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
       propertyPath: trapList.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 369df865d1ccf3e448c31f40008d6c99, type: 2}
     - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
       propertyPath: trapList.Array.data[1]
       value: 
@@ -4304,6 +4344,18 @@ PrefabInstance:
       propertyPath: trapList.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: f0062f5a96656b042a0eee1e2cf13a46, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: cdbff6ba0f54f534a89744f532ad64ac, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37dfb924f7e5d364f8ef842897fc30f1, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c90e132fc9789541ab55b721a171f81, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

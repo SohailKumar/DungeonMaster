@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52e7b460e46c2a4f883127003bb957b, type: 3}
+  m_Name: Bomblin
+  m_EditorClassIdentifier: 
+  trapname: Bomblin
+  cost: 10
+  image: {fileID: 1166343894, guid: 61693912bba138040938750225712a0e, type: 3}
+  damage: 10
+  atkSpeed: 3
+  animator: {fileID: 9100000, guid: 88fcaafa90d6cc542828e27cfaaac69e, type: 2}
