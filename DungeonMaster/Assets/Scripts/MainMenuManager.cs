@@ -16,6 +16,7 @@ public class MainMenuManager : MonoBehaviour
         CurrencySystem.Instance.addMoney(20);
         source.PlayOneShot(clip);
         SceneManager.LoadScene("GridDemo");
+        CurrencySystem.Instance.addMoney(20);
     }
 
     public void ShowCredits()
