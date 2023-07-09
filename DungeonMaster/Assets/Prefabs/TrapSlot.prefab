@@ -128,4 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51833727a069b4b4a9f285447ed83155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgrades:
+  - {fileID: 0}
+  - {fileID: 0}
   displayTrap: {fileID: 703310646014632575, guid: ca95e36e77098af47b53c42416064eed, type: 3}
+  additionalAttack: 0
