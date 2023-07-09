@@ -13,6 +13,7 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         Progression.roundNumber = 0;
+        CurrencySystem.Instance.addMoney(20);
         source.PlayOneShot(clip);
         SceneManager.LoadScene("GridDemo");
     }
