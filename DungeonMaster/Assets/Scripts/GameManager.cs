@@ -98,6 +98,11 @@ public class GameManager : MonoBehaviour
         {
             buyButtonText.text = "To Store";
             trapShop.SetActive(false);
+
+            if(Progression.roundNumber == 0)
+            {
+                OnboardingManager.Instance.DisplayOnboardingFive();
+            }
         }
         else
         {
@@ -105,6 +110,11 @@ public class GameManager : MonoBehaviour
             trapShop.SetActive(true);
             InventoryManager.Instance.gameObject.SetActive(false);
             inventoryButton.isActive = false;
+
+            if(Progression.roundNumber == 0)
+            {
+                OnboardingManager.Instance.DisplayOnboardingFour();
+            }
         }
     }
 

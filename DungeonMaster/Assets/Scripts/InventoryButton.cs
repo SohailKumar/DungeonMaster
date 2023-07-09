@@ -15,6 +15,11 @@ public class InventoryButton : MonoBehaviour
         inventory.SetActive(false);
         InventoryManager.Instance.InventorySizeForScene(new Vector2(982, 940), new Vector2(146, 130));
         InventoryManager.Instance.gameObject.GetComponentInChildren<Image>().color = new Color(255, 255, 255, 125);
+
+        if(Progression.roundNumber == 0)
+        {
+            OnboardingManager.Instance.DisplayOnboardingThree();
+        }
     }
 
     // Update is called once per frame

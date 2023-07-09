@@ -16,6 +16,12 @@ public class ItemPickup : MonoBehaviour
 
         gameObject.SetActive(false);
         //Destroy(gameObject);
+
+        if(Progression.roundNumber == 0)
+        {
+            OnboardingManager.Instance.DestroyOnboardingOne();
+            OnboardingManager.Instance.DisplayOnboardingTwo();
+        }
     }
 
     private void OnMouseDown()
