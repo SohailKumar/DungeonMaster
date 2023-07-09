@@ -401,6 +401,14 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6718394a1fd93024d8f3bbb105268799, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -763,6 +771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSpeed: 0.6
   damage: 10
+  particleEffect: {fileID: 0}
+  upgradeDmg: {fileID: 0}
 --- !u!1 &394153338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +2002,14 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6718394a1fd93024d8f3bbb105268799, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2099,6 +2117,7 @@ MonoBehaviour:
   traps:
   - {fileID: 3844412407629754136, guid: 95ad602391882644082f2878c30aba60, type: 3}
   trapShop: {fileID: 0}
+  isBattling: 0
 --- !u!4 &1607911065
 Transform:
   m_ObjectHideFlags: 0
@@ -2145,6 +2164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fa18754b3483f41b245ca28f544302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenses: []
+  addDefense: 0
 --- !u!61 &1626293604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2589,7 +2610,7 @@ SpriteRenderer:
   m_Size: {x: 12.6, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1752846156
@@ -2884,6 +2905,14 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6718394a1fd93024d8f3bbb105268799, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2942,6 +2971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4833689e418912429d4a026a2ad6439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  clip: {fileID: 0}
   creditsPanel: {fileID: 0}
 --- !u!114 &2131594660
 MonoBehaviour:
