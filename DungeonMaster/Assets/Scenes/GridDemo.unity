@@ -1198,6 +1198,7 @@ MonoBehaviour:
   - {fileID: 1879162276}
   - {fileID: 337170412}
   - {fileID: 208083985}
+  moneyDrop: {fileID: 0}
 --- !u!114 &1530805955
 MonoBehaviour:
   m_ObjectHideFlags: 0
