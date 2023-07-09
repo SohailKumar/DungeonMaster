@@ -1320,6 +1320,8 @@ MonoBehaviour:
   NPCsT2:
   - {fileID: 8526626269594454957, guid: cda560987fa67304c9aa0eabc348e39d, type: 3}
   - {fileID: 8526626269594454957, guid: c81928f7c342f8741b56fc1d27643e05, type: 3}
+  - {fileID: 8526626269594454957, guid: 6f221d1020cc75545b0184b2a6f3d535, type: 3}
+  - {fileID: 8526626269594454957, guid: 0504285e43684d94790dd8218ebcbcf0, type: 3}
   NPCsT3: []
 --- !u!4 &634212680
 Transform:
