@@ -7,6 +7,8 @@ public class NPCGoal : MonoBehaviour
 {
     [SerializeField] public List<GameObject> defenses = new List<GameObject>();
     public int addDefense = 0;
+    public Canvas canvas;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("THINGERMEBAB: " + collision.gameObject.name);
@@ -34,9 +36,16 @@ public class NPCGoal : MonoBehaviour
                 InventoryManager.Instance.ListItems();
                 CurrencySystem.Instance.resetMoney();
                 Progression.roundNumber = 0;
+                canvas.transform.Find("GameOverPanel").gameObject.SetActive(true);
                 SceneManager.LoadScene("Main Menu");
             }
         }
+    }
+
+    private void Start()
+    {
+        canvas.transform.Find("GameOverPanel").gameObject.SetActive(false);
+
     }
 
     public void OnStart()
