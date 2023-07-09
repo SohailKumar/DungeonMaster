@@ -62,8 +62,7 @@ public class NPCAdventurer : MonoBehaviour
 
     public void Die()
     {
-        GameManager.enemiesLeft--;
-        GameManager.enemyCounterText.text = GameManager.enemiesLeft.ToString() + "/" + GameManager.totalEnemies.ToString() + " Enemies";
+        GameManager.ReduceEnemies();
         Destroy(gameObject);
     }
 

@@ -250,18 +250,6 @@ PrefabInstance:
       value: 77.7774
       objectReference: {fileID: 0}
     - target: {fileID: 2541353451849188048, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.1904761
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541353451849188048, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1904761
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541353451849188048, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.1904761
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541353451849188048, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3917,6 +3905,10 @@ PrefabInstance:
       propertyPath: trap
       value: 
       objectReference: {fileID: 11400000, guid: 7f47904dfd00bad42b1e8e51ba4d5a6a, type: 2}
+    - target: {fileID: 8886332966791275688, guid: f511ce6198a5373488c469b3947f30eb, type: 3}
+      propertyPath: trapList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4002,6 +3994,7 @@ GameObject:
   - component: {fileID: 1577290154}
   - component: {fileID: 1577290153}
   - component: {fileID: 1577290152}
+  - component: {fileID: 1577290156}
   m_Layer: 0
   m_Name: END
   m_TagString: Untagged
@@ -4133,6 +4126,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1577290156
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577290151}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!224 &1605682768 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 752247242611788784, guid: 985bb24a964efde4fa014aa8dc89fa75, type: 3}
