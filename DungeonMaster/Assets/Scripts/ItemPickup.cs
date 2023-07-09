@@ -7,9 +7,15 @@ using static UnityEditor.Progress;
 public class ItemPickup : MonoBehaviour
 {
     public Items item;
+    public AudioSource source;
+    public AudioClip pickupSound;
 
     void Pickup()
     {
+        GameObject go = GameObject.Find("Canvas/InventoryManager");
+        source = go.GetComponent<AudioSource>();
+        source.PlayOneShot(InventoryManager.Instance.pickupSound);
+
         var ItemId = gameObject.GetComponent<ItemController>().Item;
         InventoryManager.Instance.AddItem(item);
         InventoryManager.Instance.ListItems();
