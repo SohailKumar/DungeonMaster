@@ -126,7 +126,5 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         ItemContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, SpaceOccupied.y);
         ItemContent.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(SpaceOccupied.x, SpaceOccupied.y);
         ItemContent.parent.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(SpaceOccupied.x, SpaceOccupied.y);
-
-        ItemContent.parent.parent.transform.position = position;
     }
 }
