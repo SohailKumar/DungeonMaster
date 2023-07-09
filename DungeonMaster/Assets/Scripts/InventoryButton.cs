@@ -7,7 +7,7 @@ public class InventoryButton : MonoBehaviour
 {
     [SerializeField] Button inventoryButton;
     GameObject inventory;
-    bool isActive = false;
+    public bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class InventoryButton : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().isBattling)
             this.gameObject.SetActive(false);
-    }
+    }   
 
     public void OnClick()
     {
@@ -35,7 +35,6 @@ public class InventoryButton : MonoBehaviour
         {
             inventory.SetActive(false);
             isActive = false;
-        }
-        
+        }   
     }
 }
