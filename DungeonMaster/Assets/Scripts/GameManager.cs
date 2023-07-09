@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using static Unity.VisualScripting.Member;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +34,10 @@ public class GameManager : MonoBehaviour
     private static GameObject afterBattleScreen;
     //private static GameObject trapSelector;
 
+    public static AudioSource source;
+    public AudioClip clip;
+    public static AudioClip victoryclip;
+
     public static int enemiesLeft;
     public static int totalEnemies;
     public static TextMeshProUGUI buyButtonText;
@@ -44,6 +49,7 @@ public class GameManager : MonoBehaviour
     public bool isBattling = false;
     public void Awake()
     {
+        source = GameObject.Find("cavebg").GetComponent<AudioSource>();
         enemyCounterText = GameObject.Find("EnemyCounter").GetComponent<TextMeshProUGUI>();
         enemyCounterText.text = "";
 
@@ -114,11 +120,12 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
     public void StartBattle()
     {
-        
 
+        
+        source.Stop();
+        source.PlayOneShot(clip);
         toBattleButton.SetActive(false);
         trapShop.SetActive(false);
         InventoryManager.Instance.gameObject.SetActive(false);
@@ -143,9 +150,10 @@ public class GameManager : MonoBehaviour
     {
         enemiesLeft--;
         enemyCounterText.text = enemiesLeft.ToString() + "/" + totalEnemies.ToString() + " Enemies";
-
+        source.Stop();
         if (enemiesLeft == 0)
         {
+            
             afterBattleScreen.SetActive(true);
         }
     }
