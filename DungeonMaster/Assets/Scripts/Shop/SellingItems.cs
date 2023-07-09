@@ -40,17 +40,7 @@ public class SellingItems : MonoBehaviour
         if(loadTimer > 0)
         {
             return;
-        }
-
-        bool canPress = false;
-        foreach (GameObject item in shopPedestals)
-        {
-            if (item.transform.childCount > 0)
-                canPress = true;
-        }
-
-        if (!canPress)
-            return;
+        } 
 
         foreach (GameObject item in shopPedestals)
         {
