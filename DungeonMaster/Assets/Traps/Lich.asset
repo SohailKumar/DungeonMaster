@@ -17,3 +17,4 @@ MonoBehaviour:
   image: {fileID: 769053464, guid: c00e7dadd8d568a48a4b14a94996327d, type: 3}
   damage: 20
   atkSpeed: 2
+  animator: {fileID: 9100000, guid: 17cf9255b84814343a6185fc57d50b4c, type: 2}

@@ -1082,6 +1082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traps: []
+  droppedItems: []
   ItemContent: {fileID: 660299977}
   InventoryItem: {fileID: 3096812457557359583, guid: 85b4eb21666bde14b971937eeb12024e, type: 3}
   ItemToInstantiate: {fileID: 927976460406255368, guid: 0936be6e7bf250a40810e32865b760a4, type: 3}

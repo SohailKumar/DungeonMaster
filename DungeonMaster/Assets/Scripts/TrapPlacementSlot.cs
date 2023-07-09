@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,10 +44,13 @@ public class TrapPlacementSlot : MonoBehaviour
 
     void GenerateTrap()
     {
+        
         displayTrap.GetComponent<SpriteRenderer>().sprite = transform.GetChild(0).Find("Image").GetComponent<Image>().sprite;
+        displayTrap.GetComponent<Animator>().runtimeAnimatorController = transform.GetComponentInChildren<ItemController>().Trap.animator;
         Trapper trapper = displayTrap.GetComponent<Trapper>();
         trapper.damage = transform.GetComponentInChildren<ItemController>().Trap.damage;
         trapper.attackSpeed = transform.GetComponentInChildren<ItemController>().Trap.atkSpeed;
+       
         trapper.upgradeDmg = this;
         trap = Instantiate(displayTrap, new Vector3(Camera.main.ScreenToWorldPoint(transform.position).x+1.1f, Camera.main.ScreenToWorldPoint(transform.position).y + 1.63f), transform.rotation);
     }
