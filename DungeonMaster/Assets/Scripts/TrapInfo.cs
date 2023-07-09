@@ -35,7 +35,7 @@ public class TrapInfo : MonoBehaviour
         if(CurrencySystem.Instance.loseMoney(trapPrice) == true)
         {
             GameManager.trapInventory.Add(gm.traps[trapNumber]);
-            CurrencySystem.Instance.setMoneyText();
+            //CurrencySystem.Instance.setMoneyText();
 
             InventoryManager.Instance.AddTrap(trapList[randomTrap]);
             InventoryManager.Instance.ListItems();
