@@ -1533,6 +1533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryButton: {fileID: 0}
+  isActive: 0
 --- !u!1 &734067275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,11 +2140,11 @@ RectTransform:
   m_Children:
   - {fileID: 719965193}
   - {fileID: 325549869}
-  - {fileID: 1939753788}
   - {fileID: 28951652}
+  - {fileID: 734067276}
+  - {fileID: 1939753788}
   - {fileID: 1062262511}
   - {fileID: 1711575608}
-  - {fileID: 734067276}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

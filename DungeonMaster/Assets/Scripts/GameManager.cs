@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public static TextMeshProUGUI enemyCounterText;
     public static TextMeshProUGUI buyButtonText;
     public static GameObject toBattleButton;
+    public static InventoryButton inventoryButton;
 
     public bool isBattling = false;
     public void Awake()
@@ -46,8 +47,11 @@ public class GameManager : MonoBehaviour
 
         if(curScreen == Screen.Dungeon)
         {
+            inventoryButton = GameObject.Find("OpenInventory").GetComponent<InventoryButton>();
+
             toBattleButton = GameObject.Find("Battle");
             toBattleButton.SetActive(true);
+            
             buyButtonText = GameObject.Find("BuyButtonText").GetComponent<TextMeshProUGUI>();
             buyButtonText.text = "To Store";
             
@@ -96,6 +100,8 @@ public class GameManager : MonoBehaviour
         {
             buyButtonText.text = "To Dungeon";
             trapShop.SetActive(true);
+            InventoryManager.Instance.gameObject.SetActive(false);
+            inventoryButton.isActive = false;
         }
     }
 
@@ -104,6 +110,7 @@ public class GameManager : MonoBehaviour
         toBattleButton.SetActive(false);
         trapShop.SetActive(false);
         InventoryManager.Instance.gameObject.SetActive(false);
+        inventoryButton.gameObject.SetActive(false);
         GameObject.Find("BuyButton").SetActive(false);
         //SET ANY NON BATTLE UI INACTIVE HERE!
         isBattling = true;
