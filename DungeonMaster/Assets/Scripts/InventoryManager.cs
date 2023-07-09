@@ -21,25 +21,14 @@ public class InventoryManager : GenericSingleton<InventoryManager>
 
     public void Start()
     {
-        GenerateRandomItem(new Vector2(0,0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
-        GenerateRandomItem(new Vector2(0, 0));
+        GenerateRandomItem(new Vector2(0, 0), 1);
+        GenerateRandomItem(new Vector2(0, 0), 1);
+        GenerateRandomItem(new Vector2(0, 0), 1);
+        GenerateRandomItem(new Vector2(0, 0), 1);
+        GenerateRandomItem(new Vector2(0, 0), 1);
+        GenerateRandomItem(new Vector2(0, 0), 1);
+        GenerateRandomItem(new Vector2(0, 0), 1);
+        GenerateRandomItem(new Vector2(0, 0), 1);
     }
 
     public void AddItem(Items item)
@@ -62,14 +51,25 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         traps.Remove(trap);
     }
 
-    public GameObject GenerateRandomItem(Vector2 position)
+    public GameObject GenerateRandomItem(Vector2 position, int tier)
     {
         GameObject obj = Instantiate(ItemToInstantiate);
         obj.transform.position = position;
-        int rand = Random.Range(0,levelOnePrefabs.Length);
-        obj.GetComponent<SpriteRenderer>().sprite = levelOnePrefabs[rand].image;
-        obj.GetComponent<ItemController>().Item = levelOnePrefabs[rand];
-        obj.GetComponent<ItemPickup>().item = levelOnePrefabs[rand];
+        if(tier == 1)
+        {
+            int rand = Random.Range(0,levelOnePrefabs.Length);
+            obj.GetComponent<SpriteRenderer>().sprite = levelOnePrefabs[rand].image;
+            obj.GetComponent<ItemController>().Item = levelOnePrefabs[rand];
+            obj.GetComponent<ItemPickup>().item = levelOnePrefabs[rand];
+        }
+        else
+        {
+            int rand = Random.Range(0, levelTwoPrefabs.Length);
+            obj.GetComponent<SpriteRenderer>().sprite = levelTwoPrefabs[rand].image;
+            obj.GetComponent<ItemController>().Item = levelTwoPrefabs[rand];
+            obj.GetComponent<ItemPickup>().item = levelTwoPrefabs[rand];
+        }
+        
         return obj;
     }
 
