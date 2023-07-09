@@ -68,14 +68,12 @@ public class GameManager : MonoBehaviour
         return sum;
     }
 
-    public void OpenTrapShop()
+    public void ToggleTrapShop()
     {
-        trapShop.SetActive(true);
-    }
-
-    public void CloseTrapShop()
-    {
-        trapShop.SetActive(false);
+        if(trapShop.activeSelf)
+            trapShop.SetActive(false);
+        else 
+            trapShop.SetActive(true);
     }
 
     public void StartBattle()

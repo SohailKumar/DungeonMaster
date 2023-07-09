@@ -1042,6 +1042,7 @@ MonoBehaviour:
   levelOnePrefabs:
   - {fileID: 11400000, guid: 7353596346baaf54a92351e20b30224f, type: 2}
   - {fileID: 11400000, guid: 0f5591158a859b842b72a339f87f23cc, type: 2}
+  - {fileID: 11400000, guid: 0f5591158a859b842b72a339f87f23cc, type: 2}
 --- !u!1001 &1471089183
 PrefabInstance:
   m_ObjectHideFlags: 0
