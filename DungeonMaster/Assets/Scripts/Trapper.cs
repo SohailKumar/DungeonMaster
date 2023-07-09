@@ -6,6 +6,7 @@ public class Trapper : MonoBehaviour
 {
     [SerializeField] public float attackSpeed;
     [SerializeField] public int damage;
+    [SerializeField] public GameObject particleEffect;
 
     private void Start()
     {
@@ -13,12 +14,16 @@ public class Trapper : MonoBehaviour
     }
     void DPS()
     {
-        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(gameObject.transform.position, transform.localScale, 0);
+        GameObject.Instantiate(particleEffect, transform.position + Vector3.up*0.4f, Quaternion.Euler(-90, 0, 0));
+        List<Collider2D> hitColliders = new List<Collider2D>();
+        ContactFilter2D _contactFilter = new ContactFilter2D();
+        Physics2D.OverlapCollider(transform.GetComponent<Collider2D>(), _contactFilter, hitColliders);
 
         foreach(Collider2D col in hitColliders)
         {
             if (col.tag == "Adventurer")
             {
+                Debug.Log(col.name);
                 col.GetComponent<NPCAdventurer>().TakeTrapDamage(damage);
             }
 

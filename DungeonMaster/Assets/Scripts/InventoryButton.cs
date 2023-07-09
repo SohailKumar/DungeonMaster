@@ -20,6 +20,7 @@ public class InventoryButton : MonoBehaviour
     void Update()
     {
         if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().isBattling)
+
             this.gameObject.SetActive(false);
     }
 
