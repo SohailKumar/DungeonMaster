@@ -20,6 +20,14 @@ public class NewBehaviourScript : MonoBehaviour
             }
         }
 
+        foreach (GameObject item in InventoryManager.Instance.droppedItems)
+        {
+            if (item.transform.parent == null && item.activeInHierarchy)
+            {
+                InventoryManager.Instance.AddItem(item.GetComponent<ItemController>().Item);
+            }
+        }
+        InventoryManager.Instance.droppedItems.Clear();
         InventoryManager.Instance.ListItems();
         SceneManager.LoadScene("GridDemo");
     }
