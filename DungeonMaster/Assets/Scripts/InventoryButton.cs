@@ -19,7 +19,8 @@ public class InventoryButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().isBattling)
+            this.gameObject.SetActive(false);
     }
 
     public void OnClick()
