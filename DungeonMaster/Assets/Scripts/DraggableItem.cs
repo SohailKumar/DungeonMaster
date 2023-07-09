@@ -10,6 +10,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField] public Image image;
     [SerializeField] public Transform parentAfterDrag;
     public bool isTrap;
+    public bool isRemoved;
 
     private Canvas infoCard;
 
