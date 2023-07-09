@@ -13,11 +13,16 @@ public class NPCGoal : MonoBehaviour
         {
             collision.GetComponent<NPCAdventurer>().Die();
 
-            if (20 - addDefense < 0)
+            if (addDefense >= 20)
             {
+                addDefense -= 20;
+            }
+            else if (addDefense - 20 < 0)
+            {
+                CurrencySystem.Instance.loseMoney(20 - addDefense);
                 addDefense = 0;
             }
-            CurrencySystem.Instance.loseMoney(20 - addDefense);
+            
             Debug.Log("Money: " + CurrencySystem.Instance.getMoney());
         }
     }
