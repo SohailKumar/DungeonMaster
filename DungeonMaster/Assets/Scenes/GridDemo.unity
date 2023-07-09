@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1384436354}
-  clip: {fileID: 8300000, guid: a0a2a0dba228d2d4aaf48eeb32f722b0, type: 3}
+  clip: {fileID: 8300000, guid: b0d30dea62f23b7449dc566b30bf19d5, type: 3}
   dropAcceptType: 2
 --- !u!1 &737176047
 GameObject:
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1384436354}
-  clip: {fileID: 8300000, guid: a0a2a0dba228d2d4aaf48eeb32f722b0, type: 3}
+  clip: {fileID: 8300000, guid: b0d30dea62f23b7449dc566b30bf19d5, type: 3}
   dropAcceptType: 0
 --- !u!1 &780143838
 GameObject:

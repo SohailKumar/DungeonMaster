@@ -96,9 +96,6 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                         new Color(draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.r,
                         draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.g,
                         draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.b, 255);
-
-
-                    Debug.Log("InvDriop");
                 }
                 Debug.Log(draggableItem);
 
