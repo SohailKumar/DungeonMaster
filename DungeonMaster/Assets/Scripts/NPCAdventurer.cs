@@ -10,7 +10,7 @@ public class NPCAdventurer : MonoBehaviour
     public float Maxhealth = 20;
     float health;
     public float knockbackMax = 1f;
-
+    
     public float knockbackForce = 0.05f;
     private bool knockedBack = false;
     private float knockbackTimer = 0f;
@@ -62,7 +62,7 @@ public class NPCAdventurer : MonoBehaviour
     public void Die()
     {
         GameManager.ReduceEnemies();
-        InventoryManager.Instance.GenerateRandomItem(new Vector2(transform.position.x,transform.position.y+0.5f));
+        InventoryManager.Instance.droppedItems.Add(InventoryManager.Instance.GenerateRandomItem(new Vector2(transform.position.x,transform.position.y+0.5f)));
         Destroy(gameObject);
     }
 

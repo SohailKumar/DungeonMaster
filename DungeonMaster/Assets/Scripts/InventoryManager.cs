@@ -9,6 +9,7 @@ public class InventoryManager : GenericSingleton<InventoryManager>
 {
     public List<Items> items = new List<Items>();
     public List<Trap> traps = new List<Trap>();
+    public List<GameObject> droppedItems = new List<GameObject>();
 
     public Transform ItemContent;
     public GameObject InventoryItem;
@@ -60,7 +61,7 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         traps.Remove(trap);
     }
 
-    public void GenerateRandomItem(Vector2 position)
+    public GameObject GenerateRandomItem(Vector2 position)
     {
         GameObject obj = Instantiate(ItemToInstantiate);
         obj.transform.position = position;
@@ -68,6 +69,7 @@ public class InventoryManager : GenericSingleton<InventoryManager>
         obj.GetComponent<SpriteRenderer>().sprite = levelOnePrefabs[rand].image;
         obj.GetComponent<ItemController>().Item = levelOnePrefabs[rand];
         obj.GetComponent<ItemPickup>().item = levelOnePrefabs[rand];
+        return obj;
     }
 
     public void ListItems()
