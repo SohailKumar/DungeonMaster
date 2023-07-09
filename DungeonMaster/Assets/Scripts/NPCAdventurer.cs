@@ -51,8 +51,7 @@ public class NPCAdventurer : MonoBehaviour
         health -= damage;
         float damageOffset = (health / Maxhealth);
         gameObject.transform.GetChild(1).transform.localScale = new Vector2(damageOffset, 0.1f);
-        gameObject.transform.GetChild(1).transform.position = new Vector2(gameObject.transform.GetChild(1).transform.position.x-(.3f-.3f*damageOffset), gameObject.transform.GetChild(1).transform.position.y);
-
+        gameObject.transform.GetChild(1).transform.position = new Vector2(gameObject.transform.GetChild(1).transform.position.x-(.35f-.35f*damageOffset), gameObject.transform.GetChild(1).transform.position.y);
     }
 
     private void TakeKnockback()
@@ -63,6 +62,7 @@ public class NPCAdventurer : MonoBehaviour
     public void Die()
     {
         GameManager.ReduceEnemies();
+        InventoryManager.Instance.GenerateRandomItem(new Vector2(transform.position.x,transform.position.y+0.5f));
         Destroy(gameObject);
     }
 
