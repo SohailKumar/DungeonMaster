@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Trap", menuName = "Trap/Create New Trap")]
