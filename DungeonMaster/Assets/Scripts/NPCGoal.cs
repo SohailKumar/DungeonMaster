@@ -22,7 +22,7 @@ public class NPCGoal : MonoBehaviour
             }
             else if (addDefense - 20 < 0)
             {
-                CurrencySystem.Instance.loseMoney(20 - addDefense);
+                CurrencySystem.Instance.EnemyLoseMoney(20 - addDefense);
                 addDefense = 0;
             }
             
