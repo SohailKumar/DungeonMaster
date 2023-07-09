@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
         }
         
         DontDestroyOnLoad(this.gameObject);
-        isBattling = false;
     }
 
     public int TrapCheck(int trapNumber)
@@ -68,6 +67,11 @@ public class GameManager : MonoBehaviour
             }
         }
         return sum;
+    }
+
+    public void OnLevelWasLoaded(int level)
+    {
+        isBattling = false;
     }
 
     public void ToggleTrapShop()
