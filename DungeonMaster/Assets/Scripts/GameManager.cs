@@ -58,10 +58,6 @@ public class GameManager : MonoBehaviour
             toBattleButton = GameObject.Find("Battle");
             toBattleButton.SetActive(true);
             
-            buyButtonText = GameObject.Find("BuyButtonText").GetComponent<TextMeshProUGUI>();
-            buyButtonText.text = "To Store";
-            
-            trapShop = GameObject.Find("TrapShop");
             trapShop.SetActive(false);
 
             afterBattleScreen = GameObject.Find("AfterBattlePanel");
