@@ -3829,6 +3829,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fa18754b3483f41b245ca28f544302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenses:
+  - {fileID: 761472097}
+  - {fileID: 1257532815}
+  - {fileID: 1281566255}
+  - {fileID: 1018137281}
+  - {fileID: 148633495}
+  - {fileID: 1630168616}
+  - {fileID: 1795385340}
+  - {fileID: 1897883531}
+  addDefense: 0
 --- !u!61 &1577290153
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5069,6 +5079,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1607911064}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartBattle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1577290152}
+        m_TargetAssemblyTypeName: NPCGoal, Assembly-CSharp
+        m_MethodName: OnStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
