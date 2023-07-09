@@ -379,7 +379,7 @@ MonoBehaviour:
   speed: 0.004
   Maxhealth: 60
   knockbackMax: 0.2
-  damageMax: 0.6
+  damageMax: 0.4
   knockbackForce: 0.006
   mouseAttackMax: 1
   damageTimer: 0
