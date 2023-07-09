@@ -47,7 +47,7 @@ public class SellingItems : MonoBehaviour
                 Image renderer = money.AddComponent<Image>();
                 money.transform.position = item.transform.GetChild(0).position;
                 renderer.sprite = moneyDrop;
-                renderer.transform.localScale = new Vector2(0.4f, .4f);
+                renderer.transform.localScale = new Vector2(0.3f, .3f);
 
                 Destroy(item.transform.GetChild(0).gameObject);
 
