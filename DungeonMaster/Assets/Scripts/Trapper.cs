@@ -6,6 +6,7 @@ public class Trapper : MonoBehaviour
 {
     [SerializeField] public float attackSpeed;
     [SerializeField] public int damage;
+    public TrapPlacementSlot upgradeDmg;
 
     private void Start()
     {
@@ -19,7 +20,9 @@ public class Trapper : MonoBehaviour
         {
             if (col.tag == "Adventurer")
             {
-                col.GetComponent<NPCAdventurer>().TakeTrapDamage(damage);
+                Debug.Log(damage);
+                Debug.Log(upgradeDmg.additionalAttack);
+                col.GetComponent<NPCAdventurer>().TakeTrapDamage(damage + upgradeDmg.additionalAttack);
             }
 
         }
