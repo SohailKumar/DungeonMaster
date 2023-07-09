@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PedestalSlot : MonoBehaviour, IDropHandler
 {
@@ -39,14 +40,14 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 {
                     InventoryManager.Instance.RemoveTrap(dropped.GetComponent<ItemController>().Trap);
                     dropped.GetComponent<DraggableItem>().isRemoved = true;
+                    dropped.GetComponent<Image>().color = new Color(0, 0, 0, 0);
                 }
                 else if (!dropped.GetComponent<ItemController>().isTrap && !dropped.GetComponent<DraggableItem>().isRemoved)
                 {
                     InventoryManager.Instance.RemoveItem(dropped.GetComponent<ItemController>().Item);
                     dropped.GetComponent<DraggableItem>().isRemoved = true;
-                    Debug.Log("Remove1");
+                    dropped.GetComponent<Image>().color = new Color(0, 0, 0, 0);
                 }
-                Debug.Log("drop");
             }
             else if (transform.name == "Content")
             {
@@ -60,11 +61,13 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 {
                     InventoryManager.Instance.AddTrap(dropped.GetComponent<ItemController>().Trap);
                     dropped.GetComponent<DraggableItem>().isRemoved = false;
+                    dropped.GetComponent<Image>().color = new Color(251 / 255f, 145 / 255f, 145 / 255f);
                 }
                 else if (!dropped.GetComponent<ItemController>().isTrap && dropped.GetComponent<DraggableItem>().isRemoved)
                 {
                     InventoryManager.Instance.AddItem(dropped.GetComponent<ItemController>().Item);
                     dropped.GetComponent<DraggableItem>().isRemoved = false;
+                    dropped.GetComponent<Image>().color = Color.white;
                 }
             }
             else if (transform.name == "Inventory")
@@ -81,11 +84,13 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 {
                     InventoryManager.Instance.AddTrap(dropped.GetComponent<ItemController>().Trap);
                     dropped.GetComponent<DraggableItem>().isRemoved = false;
+                    dropped.GetComponent<Image>().color = new Color(251 / 255f, 145 / 255f, 145 / 255f);
                 }
                 else if (!dropped.GetComponent<ItemController>().isTrap && dropped.GetComponent<DraggableItem>().isRemoved)
                 {
                     InventoryManager.Instance.AddItem(dropped.GetComponent<ItemController>().Item);
                     dropped.GetComponent<DraggableItem>().isRemoved = false;
+                    dropped.GetComponent<Image>().color = Color.white;
                 }
             }
         }        

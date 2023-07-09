@@ -15,7 +15,7 @@ public class SellingItems : MonoBehaviour
     {
         GameObject inventory = InventoryManager.Instance.gameObject;
         inventory.SetActive(true);
-        InventoryManager.Instance.InventorySizeForScene(new Vector2(930, 930), new Vector2(190, 220));
+        InventoryManager.Instance.InventorySizeForScene(new Vector2(1000, 930), new Vector2(180, 180));
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class SellingItems : MonoBehaviour
                 Image renderer = money.AddComponent<Image>();
                 money.transform.position = item.transform.GetChild(0).position;
                 renderer.sprite = moneyDrop;
-                renderer.transform.localScale = new Vector2(0.4f, .4f);
+                renderer.transform.localScale = new Vector2(0.3f, .3f);
 
                 Destroy(item.transform.GetChild(0).gameObject);
 
