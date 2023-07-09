@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Trapper : MonoBehaviour
 {
-    [SerializeField] private float attackSpeed;
-    [SerializeField] private int damage;
+    [SerializeField] public float attackSpeed;
+    [SerializeField] public int damage;
 
     private void Start()
     {
@@ -17,7 +17,6 @@ public class Trapper : MonoBehaviour
 
         foreach(Collider2D col in hitColliders)
         {
-            Debug.Log(col.gameObject.name);
             if (col.tag == "Adventurer")
             {
                 col.GetComponent<NPCAdventurer>().TakeTrapDamage(damage);

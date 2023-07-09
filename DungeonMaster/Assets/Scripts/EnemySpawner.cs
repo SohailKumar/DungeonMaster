@@ -20,6 +20,9 @@ public class EnemySpawner : MonoBehaviour
     {
         GameManager.totalEnemies = enemies.Length;
         GameManager.enemiesLeft = GameManager.totalEnemies;
+
+        GameManager.enemyCounterText.text = GameManager.enemiesLeft.ToString() + "/" + GameManager.totalEnemies.ToString() + " Enemies";
+
         List<GameObject> enemiesGO = new List<GameObject>();
         foreach(int enemy in enemies)
         {
