@@ -20,6 +20,10 @@ public class CurrencySystem : GenericSingleton<CurrencySystem>
             money -= loseAmount;
             return true;
         }
+        else if (money < loseAmount)
+        {
+            money = 0;
+        }
         return false;
     }
 
@@ -31,6 +35,11 @@ public class CurrencySystem : GenericSingleton<CurrencySystem>
     public void setMoneyText()
     {
         currencyText.text = "Money: $"+money.ToString();
+    }
+
+    public void resetMoney()
+    {
+        money = 0;
     }
 
 }

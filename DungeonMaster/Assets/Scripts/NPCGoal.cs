@@ -25,6 +25,17 @@ public class NPCGoal : MonoBehaviour
             }
             
             Debug.Log("Money: " + CurrencySystem.Instance.getMoney());
+            if (CurrencySystem.Instance.getMoney() <= 0)
+            {
+                // Player Loses
+                InventoryManager.Instance.items.Clear();
+                InventoryManager.Instance.traps.Clear();
+                InventoryManager.Instance.droppedItems.Clear();
+                InventoryManager.Instance.ListItems();
+                CurrencySystem.Instance.resetMoney();
+                Progression.roundNumber = 0;
+                SceneManager.LoadScene("Main Menu");
+            }
         }
     }
 
@@ -42,10 +53,6 @@ public class NPCGoal : MonoBehaviour
 
     private void Update()
     {
-        if (CurrencySystem.Instance.getMoney() < 0)
-        {
-            // Player Loses
-            SceneManager.LoadScene("MainMenu");
-        }
+
     }
 }
