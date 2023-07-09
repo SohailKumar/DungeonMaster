@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class PedestalSlot : MonoBehaviour, IDropHandler
 {
@@ -34,6 +35,10 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 {
                     draggableItem.parentAfterDrag = transform;
                     draggableItem.GetComponent<Image>().color = new Color(draggableItem.GetComponent<Image>().color.r, draggableItem.GetComponent<Image>().color.g, draggableItem.GetComponent<Image>().color.b, 0);
+                    draggableItem.GetComponentInChildren<TextMeshProUGUI>().color = 
+                        new Color(draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.r,
+                        draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.g,
+                        draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.b, 0);
                 }
 
                 // Remove it from inventory
@@ -57,7 +62,10 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 {
                     draggableItem.parentAfterDrag = transform;
                     draggableItem.GetComponent<Image>().color = new Color(draggableItem.GetComponent<Image>().color.r, draggableItem.GetComponent<Image>().color.g, draggableItem.GetComponent<Image>().color.b, 255);
-
+                    draggableItem.GetComponentInChildren<TextMeshProUGUI>().color = 
+                        new Color(draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.r,
+                        draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.g,
+                        draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.b, 225);
                 }
 
                 if (dropped.GetComponent<ItemController>().isTrap && dropped.GetComponent<DraggableItem>().isRemoved)
@@ -78,6 +86,11 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
                 {
                     draggableItem.parentAfterDrag = transform.GetChild(0).GetChild(0);
                     draggableItem.GetComponent<Image>().color = new Color(draggableItem.GetComponent<Image>().color.r, draggableItem.GetComponent<Image>().color.g, draggableItem.GetComponent<Image>().color.b, 255);
+                    draggableItem.GetComponentInChildren<TextMeshProUGUI>().color =
+                        new Color(draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.r,
+                        draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.g,
+                        draggableItem.GetComponentInChildren<TextMeshProUGUI>().color.b, 255);
+
 
                     Debug.Log("InvDriop");
                 }
