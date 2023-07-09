@@ -6,7 +6,7 @@ public class ImageAnimation : MonoBehaviour
 {
 
     public Sprite[] sprites;
-    public int spritePerFrame = 6;
+    public int spritePerFrame = 3;
     public bool loop = true;
     public bool destroyOnEnd = false;
 

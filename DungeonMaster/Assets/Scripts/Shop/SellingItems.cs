@@ -18,7 +18,7 @@ public class SellingItems : MonoBehaviour
     {
         GameObject inventory = InventoryManager.Instance.gameObject;
         inventory.SetActive(true);
-        InventoryManager.Instance.InventorySizeForScene(new Vector2(1000, 920), new Vector2(160, 208));
+        InventoryManager.Instance.InventorySizeForScene(new Vector2(1000, 104), new Vector2(160, 208));
         InventoryManager.Instance.gameObject.GetComponentInChildren<Image>().color = new Color(255, 255, 255, 0);
     }
 
