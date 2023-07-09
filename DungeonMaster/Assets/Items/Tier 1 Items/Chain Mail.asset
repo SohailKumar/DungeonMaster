@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Chain Mail
   saleAmount: 10
-  image: {fileID: 21300000, guid: c1891cddc9e15c749a352a10b2239541, type: 3}
+  image: {fileID: 21300000, guid: d60ddf6645ada1745b99a4f044bf4585, type: 3}
   AttackDamage: 0
   Defense: 10
   flavortext: Why would they put holes in their armor? That seems counterproductive.

@@ -573,7 +573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1.0972299e+10}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &660299978
@@ -1042,6 +1042,12 @@ MonoBehaviour:
   levelOnePrefabs:
   - {fileID: 11400000, guid: 7353596346baaf54a92351e20b30224f, type: 2}
   - {fileID: 11400000, guid: 0f5591158a859b842b72a339f87f23cc, type: 2}
+  - {fileID: 11400000, guid: 7a5df2542b78dac4d82c2f7ccd5a76c6, type: 2}
+  - {fileID: 11400000, guid: 1887ea2a6a911a04bb88e9af1807aa87, type: 2}
+  - {fileID: 11400000, guid: e566278f82102834c932cc1ce1bd8124, type: 2}
+  - {fileID: 11400000, guid: ad8556130647cba4da025d72b79dde0b, type: 2}
+  - {fileID: 11400000, guid: cf47a9e9e80e80e4d8b35ad3ebb7febc, type: 2}
+  - {fileID: 11400000, guid: 03df2c94e2af3134ca9b606f74b7b9fe, type: 2}
 --- !u!1001 &1471089183
 PrefabInstance:
   m_ObjectHideFlags: 0
