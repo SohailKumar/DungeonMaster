@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public static int totalEnemies;
     public static TextMeshProUGUI enemyCounterText;
 
+    public bool isBattling = false;
     public void Awake()
     {
         enemyCounterText = GameObject.Find("EnemyCounter").GetComponent<TextMeshProUGUI>();
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         }
         
         DontDestroyOnLoad(this.gameObject);
+        isBattling = false;
     }
 
     public int TrapCheck(int trapNumber)
@@ -70,19 +72,24 @@ public class GameManager : MonoBehaviour
 
     public void OpenTrapShop()
     {
-        trapShop.SetActive(true);
-    }
+        if(isBattling) 
+        {
+            return;
+        }
 
-    public void CloseTrapShop()
-    {
-        trapShop.SetActive(false);
+        if(trapShop.activeSelf)
+            trapShop.SetActive(false);
+        else 
+            trapShop.SetActive(true);
     }
 
     public void StartBattle()
     {
         trapShop.SetActive(false);
+        InventoryManager.Instance.gameObject.SetActive(false);
         GameObject.Find("BuyButton").SetActive(false);
         //SET ANY NON BATTLE UI INACTIVE HERE!
+        isBattling = true;
 
         //start spawner
         int[] ar = { 1, 1, 1, 1 };
