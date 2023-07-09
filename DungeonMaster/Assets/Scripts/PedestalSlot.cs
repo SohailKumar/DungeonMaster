@@ -32,6 +32,9 @@ public class PedestalSlot : MonoBehaviour, IDropHandler
             || !dropped.GetComponent<ItemController>().isTrap && dropAcceptType == DropAcceptType.Item
             || dropAcceptType == DropAcceptType.All)
         {
+            source = GameObject.Find("Canvas/InventoryManager").GetComponent<AudioSource>();
+            Debug.Log(source);
+            source.PlayOneShot(clip);
             if (transform.childCount == 0)
             {
                 DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
