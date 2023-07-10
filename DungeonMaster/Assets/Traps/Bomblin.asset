@@ -15,7 +15,8 @@ MonoBehaviour:
   trapname: Bomblin
   cost: 40
   image: {fileID: 1166343894, guid: 61693912bba138040938750225712a0e, type: 3}
-  damage: 35
+  damage: 15
   atkSpeed: 1.8
   animator: {fileID: 9100000, guid: 88fcaafa90d6cc542828e27cfaaac69e, type: 2}
   knockback: 1
+  flavortext: What a creative method of doing damage.

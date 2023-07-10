@@ -19,3 +19,4 @@ MonoBehaviour:
   atkSpeed: 1.4
   animator: {fileID: 9100000, guid: 5413cda0740764945a59b49465c6c2c4, type: 2}
   knockback: 0
+  flavortext: Very rare to only see one.

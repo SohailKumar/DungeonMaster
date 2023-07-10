@@ -19,3 +19,4 @@ MonoBehaviour:
   atkSpeed: 1.2
   animator: {fileID: 9100000, guid: 876a68f66e9fe2d4d94f727348137373, type: 2}
   knockback: 1
+  flavortext: Where did he learn to do that?

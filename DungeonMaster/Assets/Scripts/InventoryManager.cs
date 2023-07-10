@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.Progress;
 
 public class InventoryManager : GenericSingleton<InventoryManager>
 {
@@ -111,10 +112,24 @@ public class InventoryManager : GenericSingleton<InventoryManager>
             var trapIcon = obj.transform.Find("Image").GetComponent<Image>();
             var trapID = obj.transform.GetComponent<ItemController>();
 
+            var Popup = obj.transform.Find("InfoPopup").GetChild(0);
+
+            var CardName = Popup.transform.Find("ItemNameCard").GetComponent<TMP_Text>();
+            var CardValue = Popup.transform.Find("Value").GetComponent<TMP_Text>();
+            var CardImage = Popup.transform.Find("CardImage").GetComponent<Image>();
+            var CardFlavor = Popup.transform.Find("FlavorText").GetComponent<TMP_Text>();
+            var CardAtkDef = Popup.transform.Find("AtkDefText").GetComponent<TMP_Text>();
+
             trapID.Trap = trap;
             trapID.isTrap = true;
             trapName.text = trap.trapname;
             trapIcon.sprite = trap.image;
+
+            CardName.text = trap.trapname;
+            CardValue.text = trap.cost/2 + " Coins";
+            CardImage.sprite = trap.image;
+            CardFlavor.text = trap.flavortext;
+            CardAtkDef.text = trap.damage + " Attack Damage\n" + trap.atkSpeed + " Attack Speed";
         }
     }
 

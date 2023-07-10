@@ -13,4 +13,5 @@ public class Trap : ScriptableObject
     public float atkSpeed;
     public RuntimeAnimatorController animator;
     public bool knockback;
+    public string flavortext = "";
 }

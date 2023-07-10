@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Crab
   m_EditorClassIdentifier: 
   trapname: Crab pit
-  cost: 15
+  cost: 20
   image: {fileID: 814392136, guid: 940dd7e4abf54424abf8cf8fa7ec4de1, type: 3}
   damage: 5
-  atkSpeed: 0.25
+  atkSpeed: 0.4
   animator: {fileID: 9100000, guid: a9975c72dcab8b54bbadd4b45de326f6, type: 2}
   knockback: 0
+  flavortext: Hurt more than piranhas, and cost less than crocs

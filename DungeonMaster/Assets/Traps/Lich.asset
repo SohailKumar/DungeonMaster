@@ -19,3 +19,4 @@ MonoBehaviour:
   atkSpeed: 0.6
   animator: {fileID: 9100000, guid: 17cf9255b84814343a6185fc57d50b4c, type: 2}
   knockback: 0
+  flavortext: Undying Loyalty.

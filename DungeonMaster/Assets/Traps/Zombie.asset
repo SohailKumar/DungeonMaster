@@ -16,6 +16,7 @@ MonoBehaviour:
   cost: 10
   image: {fileID: 933354145, guid: f093ea111aac8a84f8f5ce43f68f61f3, type: 3}
   damage: 15
-  atkSpeed: 0.75
+  atkSpeed: 1
   animator: {fileID: 9100000, guid: 6ae86ab9f5454b34f934e497a58d999f, type: 2}
   knockback: 0
+  flavortext: Very basic, but gets the job done.

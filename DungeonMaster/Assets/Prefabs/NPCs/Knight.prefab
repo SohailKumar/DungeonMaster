@@ -376,9 +376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tier: 2
-  speed: 0.8
-  Maxhealth: 100
-  knockbackMax: 0.3
+  speed: 0.5
+  Maxhealth: 250
+  knockbackMax: 0.2
   damageMax: 0.6
   knockbackForce: 0.01
   mouseAttackMax: 0.6

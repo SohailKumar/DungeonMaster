@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using static Unity.VisualScripting.Member;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -123,7 +124,7 @@ public class GameManager : MonoBehaviour
     public void StartBattle()
     {
 
-        
+
         source.Stop();
         source.PlayOneShot(clip);
         toBattleButton.SetActive(false);
@@ -141,6 +142,12 @@ public class GameManager : MonoBehaviour
 
         int[] ar = {1,1};
         ar = Array.ConvertAll(spawnTiers.Trim().Split(" "), s => int.Parse(s));
+        /*if(Progression.roundNumber>=10)
+        {
+            
+        }*/
+        /*var newlist = ar.ToList();
+        Debug.Log(newlist);*/
         GameObject.Find("Spawner").GetComponent<EnemySpawner>().StartSpawner(ar, spawnDelay);
 
         Progression.roundNumber++;
@@ -151,8 +158,9 @@ public class GameManager : MonoBehaviour
         enemiesLeft--;
         enemyCounterText.text = enemiesLeft.ToString() + "/" + totalEnemies.ToString() + " Enemies";
         
-        if (enemiesLeft == 0)
+        if (enemiesLeft <= 0)
         {
+            
             source.Stop();
             afterBattleScreen.SetActive(true);
         }
